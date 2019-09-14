@@ -41,3 +41,21 @@ body{
     box-shadow: 0px 3px 0 1px #ccc;
     border-radius: 12px;
 }
+.main_block{
+    background-color: #9ec115;
+    color: white;
+    border: 6px solid #8c7e14;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+}
+.btn.shop-link *{
+    vertical-align: middle;
+}
+.btn.shop-link{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+.btn.shop-link:hover{
+    color: #6e5f2c;
+}
