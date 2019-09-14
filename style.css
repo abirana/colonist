@@ -7,13 +7,37 @@ html{
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
     background-position: center;
+    font-size: 14px;
 }
 body{
+    font-family: 'Niramit', sans-serif;
     background: transparent;
-    /* background-image: url(images/page_bg.png); */
+    color: #6e5f2c;
 }
 @media (min-width: 1400px){
     .container {
         max-width: 1340px;
     }
+}
+.btn{
+    position: relative;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    bottom: 0;
+}
+.btn-raised{
+    color: #6e5f2c;
+    box-shadow: 0px 3px 0 1px #ccc;
+    transition: all 0.15s ease-in-out;
+}
+.btn-raised:hover{
+    box-shadow: 0px 0px 0 0px #ccc;
+    bottom: -3px;
+}
+.raised_block{
+    background-color: #f8f9fa;
+    padding: 0.5rem 1.25rem;
+    box-shadow: 0px 3px 0 1px #ccc;
+    border-radius: 12px;
 }
