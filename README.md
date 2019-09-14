@@ -1,2 +1,2 @@
 # colonist
-Home page for colonist.io
+Developing page for colonist.io
