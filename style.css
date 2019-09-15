@@ -14,26 +14,66 @@ body{
     background: transparent;
     color: #6e5f2c;
 }
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #8c7e14; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #8c7e14; 
+}
+/* End Custom Scroll Bar */
+
 @media (min-width: 1400px){
     .container {
         max-width: 1340px;
     }
 }
+.row.custom_spacing {
+    margin-right: -3px;
+    margin-left: -3px;
+  }
+  .row.custom_spacing > div {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
 .btn{
-    position: relative;
     font-weight: bold;
-    border-radius: 12px;
     padding: 0.5rem 1rem;
-    bottom: 0;
 }
-.btn-raised{
+.btn_raised{
+    position: relative;
+    border-radius: 12px;
     color: #6e5f2c;
     box-shadow: 0px 3px 0 1px #ccc;
     transition: all 0.15s ease-in-out;
+    bottom: 0;
 }
-.btn-raised:hover{
+.btn_raised:hover{
     box-shadow: 0px 0px 0 0px #ccc;
     bottom: -3px;
+}
+.btn.shop_link *{
+    vertical-align: middle;
+}
+.btn.shop_link{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+.btn.shop_link:hover{
+    color: #6e5f2c;
 }
 .raised_block{
     background-color: #f8f9fa;
@@ -48,14 +88,36 @@ body{
     padding: 0.5rem 1rem;
     border-radius: 12px;
 }
-.btn.shop-link *{
-    vertical-align: middle;
+.chat_box .message_list{
+    height: 400px;
+    overflow-y: scroll;
+    margin: 0 -0.5rem;
 }
-.btn.shop-link{
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
+.chat_box .message_list .message_post{
+    margin-bottom: 0.25rem;
+    padding: 0 0.5rem;
+    border-radius: 5px;
 }
-.btn.shop-link:hover{
-    color: #6e5f2c;
+.chat_box .message_list .message_post:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.chat_box form button.btn_send{
+    padding: 0rem 0.7rem;
+    border: 1px solid #ccc;
+}
+.chat_box form button.btn_send>img{
+    width: 16px;
+}
+.online_players_list{
+    height: 190px;
+    overflow-y: scroll;
+    /* margin: 0 -0.5rem; */
+}
+.online_players_list .player_name{
+    padding-bottom: 0.25rem;
+    /* padding: 0 0.5rem; */
+    border-radius: 5px;
+}
+.online_players_list .player_name:hover{
+    background-color: rgba(0, 0, 0, 0.1);
 }
