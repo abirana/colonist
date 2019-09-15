@@ -10,7 +10,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Niramit:200,300,400,500,600,700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css?">
 
         <title>Colonist.io</title>
     </head>
@@ -59,23 +59,23 @@
 
         <div class="container py-3">
             <div class="row">
-                <div class="col-xl-auto d-none d-xl-block">
+                <div class="col-xl-auto ab_block">
                     <img src="images/AD SPACE.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-xl">
                     <div class="row custom_spacing">
                         <div class="col-xl">
-                            <div class="main_block text-center py-4 mb-3">
+                            <div class="main_block text-center mb-2">
                                 <img src="images/user-img.png" class="mb-3" alt="">
                                 <h5 class="font-weight-bolder">nesir#3388</h5>
                                 <h5 class="font-weight-bolder">Rank: 53</h5>
-                                <h5 class="font-weight-bolder">Karma: <img src="images/karma-green.png" alt=""></h5>
+                                <h5 class="font-weight-bolder">Karma: <img src="images/karma-green-lg.png" alt=""></h5>
                                 <h5 class="font-weight-bolder">Win/Loss: 50/50</h5>
                             </div>
 
-                            <div class="main_block py-4 mb-3">
+                            <div class="main_block mb-2">
                                 <h4 class="font-weight-bolder text-center">Online Players</h4>
-                                <div class="online_players_list custom_scrollbar">
+                                <div class="online_players_list">
                                     <h5 class="font-weight-bolder">Players in Room: 2</h5>
                                     <div class="player_name">
                                         <img src="images/online-user-icon.png" alt=""> nesir#3388
@@ -112,28 +112,301 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5">
-                            <div class="main_block text-center py-4 mb-3">
+                        <div class="col-xl-6">
+                            <div class="main_block text-center mb-2">
                                 <a href="#" class="btn shop_link">
                                     <img src="images/cart-icon.png" alt=""> <span class="pl-2">SHOP</span>
                                 </a>
                             </div>
-                            <div class="main_block mb-3">
-                                <div class="rooms_games_block custom_scrollbar"></div>
+                            <div class="rooms_games_tabs_block text-center mb-2">                                
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link w-50 active" id="nav-rooms-tab" data-toggle="tab" href="#nav-rooms" role="tab" aria-controls="nav-rooms" aria-selected="true">Rooms: 5</a>
+                                        <a class="nav-item nav-link w-50" id="nav-games-tab" data-toggle="tab" href="#nav-games" role="tab" aria-controls="nav-games" aria-selected="false">Games: 52</a>
+                                    </div>
+                                </nav>
+                                <div class="tab-content px-2 pb-2" id="rooms_games_block-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-rooms" role="tabpanel" aria-labelledby="nav-rooms-tab">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Karma</th>
+                                                        <th scope="col">Players</th>
+                                                        <th scope="col">Mode</th>
+                                                        <th scope="col">Title</th>
+                                                        <th scope="col">Elo</th>
+                                                        <th scope="col">Join/View</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><img src="images/karma-white.png" alt=""></td>
+                                                        <td>
+                                                            <div class="player_count_two">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                            </div>                                                        </td>
+                                                        <td>
+                                                            <img src="images/mode-icon-1.png" alt="">
+                                                        </td>
+                                                        <td>nesir's room</td>
+                                                        <td>
+                                                            <img src="images/elo-icon-1.png" alt="">
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn_create w-100">Create</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="images/karma-red.png" alt=""></td>
+                                                        <td>
+                                                            <div class="player_count_three">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                            </div>                                                        </td>
+                                                        <td>
+                                                            <img src="images/mode-icon-2.png" alt="">
+                                                        </td>
+                                                        <td>someone's room</td>
+                                                        <td>
+                                                            <img src="images/elo-icon-2.png" alt="">
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn_join w-100">Join</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="images/karma-orange.png" alt=""></td>
+                                                        <td>
+                                                            <div class="player_count_one">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                            </div>                                                        </td>
+                                                        <td>
+                                                            <img src="images/mode-icon-3.png" alt="">
+                                                        </td>
+                                                        <td></td>
+                                                        <td>
+                                                            <img src="images/elo-icon-3.png" alt="">
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="images/karma-green.png" alt=""></td>
+                                                        <td>
+                                                            <div class="player_count_four">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                            </div>                                                        </td>
+                                                        <td>
+                                                            <img src="images/mode-icon-2.png" alt="">
+                                                        </td>
+                                                        <td></td>
+                                                        <td>
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-games" role="tabpanel" aria-labelledby="nav-games-tab">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Karma</th>
+                                                        <th scope="col">Players</th>
+                                                        <th scope="col">Mode</th>
+                                                        <th scope="col">Title</th>
+                                                        <th scope="col">Elo</th>
+                                                        <th scope="col">Join/View</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><img src="images/karma-white.png" alt=""></td>
+                                                        <td>
+                                                            <div class="player_count_three">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <img src="images/mode-icon-1.png" alt="">
+                                                        </td>
+                                                        <td>nesir's room</td>
+                                                        <td>
+                                                            <img src="images/elo-icon-1.png" alt="">
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn_create w-100">Create</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="images/karma-red.png" alt=""></td>
+                                                        <td>
+                                                            <div class="player_count_three">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <img src="images/mode-icon-2.png" alt="">
+                                                        </td>
+                                                        <td></td>
+                                                        <td>
+                                                            <img src="images/elo-icon-2.png" alt="">
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn_join w-100">Join</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="images/karma-orange.png" alt=""></td>
+                                                        <td>
+                                                            <div class="player_count_two">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <img src="images/mode-icon-3.png" alt="">
+                                                        </td>
+                                                        <td></td>
+                                                        <td>
+                                                            <img src="images/elo-icon-3.png" alt="">
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="images/karma-green.png" alt=""></td>
+                                                        <td>
+                                                            <div class="player_count_four">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                                <img src="images/online-user-icon.png" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <img src="images/mode-icon-2.png" alt="">
+                                                        </td>
+                                                        <td></td>
+                                                        <td>
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="main_block text-center py-4 mb-3">
+                            <div class="main_block text-center mb-2">
                                 <a href="#" class="btn shop_link">
                                     <img src="images/cart-icon.png" alt=""> <span class="pl-2">SHOP</span>
                                 </a>
                             </div>
                         </div>
                         <div class="col-xl">
-                            <div class="main_block chat_box py-4 mb-3">
+                            <div class="main_block chat_box mb-2">
                                 <h4 class="font-weight-bolder text-center">Lobby Chat</h4>
                                 <p class="help_text mb-1">
                                     Type /help to get a list of commands
                                 </p>
-                                <div class="message_list custom_scrollbar my-2">
+                                <div class="message_list my-2">
                                     <div class="message_post">
                                         <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hi
                                     </div>
@@ -212,11 +485,56 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-auto d-none d-xl-block">
+                <div class="col-xl-auto ab_block">
                     <img src="images/AD SPACE.jpg" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
+
+        <footer class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-xl-2"></div>
+                <div class="col-xl-8">
+                    <ul class="nav justify-content-center my-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Press Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Patch Notes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Suggestions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xl-2">
+                    <div class="social_share_container d-flex justify-content-around my-1">
+                        <a href="https://www.facebook.com/colonistio/" target="_blank" class="btn-facebook">
+                            <img src="images/icon_facebook.png" alt="">
+                        </a>
+                        <a href="https://twitter.com/colonistio" target="_blank" class="btn-twitter">
+                            <img src="images/icon_twitter.png" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/colonist_io/" target="_blank" class="btn-instagram">
+                            <img src="images/icon_instagram.png" alt="">
+                        </a>
+                        <a href="https://discord.gg/Ns94aUr" target="_blank" class="btn-discord">
+                            <img src="images/icon_discord.png" alt="">
+                        </a>
+                        <a href="https://www.reddit.com/r/Colonist/" target="_blank" class="btn-reddit">
+                            <img src="images/icon_reddit.png" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCkmPiTR8n0zqT6tIuUK0klA" target="_blank" class="btn-youtube">
+                            <img src="images/icon_youtube.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
         
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
