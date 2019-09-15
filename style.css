@@ -88,8 +88,13 @@ body{
     padding: 0.5rem 1rem;
     border-radius: 12px;
 }
+
+/* Chat Box */
+.chat_box .help_text{
+    font-size: 15px;
+}
 .chat_box .message_list{
-    height: 400px;
+    height: 375px;
     overflow-y: scroll;
     margin: 0 -0.5rem;
 }
@@ -108,16 +113,19 @@ body{
 .chat_box form button.btn_send>img{
     width: 16px;
 }
+
+/* Players List */
 .online_players_list{
     height: 190px;
     overflow-y: scroll;
-    /* margin: 0 -0.5rem; */
 }
 .online_players_list .player_name{
     padding-bottom: 0.25rem;
-    /* padding: 0 0.5rem; */
     border-radius: 5px;
 }
 .online_players_list .player_name:hover{
     background-color: rgba(0, 0, 0, 0.1);
+}
+.rooms_games_block{
+    height: 270px;
 }
