@@ -16,20 +16,20 @@ body{
 }
 
 /* Custom Scroll Bar */
-::-webkit-scrollbar {
+.custom_scrollbar::-webkit-scrollbar {
     width: 5px;
 }
-::-webkit-scrollbar-track {
+.custom_scrollbar::-webkit-scrollbar-track {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background-color: white;
 }
-::-webkit-scrollbar-thumb {
+.custom_scrollbar::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: #8c7e14; 
 }
-::-webkit-scrollbar-thumb:window-inactive {
+.custom_scrollbar::-webkit-scrollbar-thumb:window-inactive {
 	background: #8c7e14; 
 }
 /* End Custom Scroll Bar */
