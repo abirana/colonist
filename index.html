@@ -10,20 +10,20 @@
 
         <link href="https://fonts.googleapis.com/css?family=Niramit:200,300,400,500,600,700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="style.css?">
+        <link rel="stylesheet" href="style.css?=1">
 
         <title>Colonist.io</title>
     </head>
     <body>
-        <div class="container">
-            <div class="row align-items-center">
+        <header class="container-fluid">
+            <div class="row align-items-center custom_spacing">
                 <div class="col-lg">
-                    <div class="row align-items-center">
-                        <div class="col col-xl-4">
+                    <div class="row align-items-center custom_spacing-md">
+                        <div class="col col-xl-4 col-lg-5">
                             <a href="#" class="btn btn-light btn_raised w-100 my-2">Learn to Play</a>
                             <a href="#" class="btn btn-light btn_raised w-100 my-2">Join Turnament</a>
                         </div>
-                        <div class="col col-xl-5">
+                        <div class="col col-xl-5 col-lg-6">
                             <div class="raised_block my-2">
                                 <h6 class="font-weight-bolder">
                                     Streamlining Live <img src="images/twitch_icon.png" alt="">
@@ -46,27 +46,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <a href="#">
+                <div class="col-lg-auto text-center">
+                    <a href="#" class="header_logo">
                         <img src="images/logo.png" class="img-fluid" alt="">
                     </a>
                 </div>
                 <div class="col-lg text-lg-right">
-                    <a href="#" class="btn btn-light btn_raised my-2">Login</a>
+                    <a href="#" class="btn btn-light btn_raised my-2 px-5">Login</a>
                 </div>
             </div>
-        </div>
+        </header>
 
-        <div class="container py-3">
-            <div class="row">
-                <div class="col-xl-auto ab_block">
+        <div class="container py-2 main_container_block">
+            <div class="row custom_spacing">
+                <div class="col-xl-auto d-none d-xl-block ab_block ab_block-one">
                     <img src="images/AD SPACE.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-xl">
                     <div class="row custom_spacing">
-                        <div class="col-xl">
+                        <div class="col-md">
                             <div class="main_block text-center mb-2">
-                                <img src="images/user-img.png" class="mb-3" alt="">
+                                <div class="profile_img mb-3"></div>
                                 <h5 class="font-weight-bolder">nesir#3388</h5>
                                 <h5 class="font-weight-bolder">Rank: 53</h5>
                                 <h5 class="font-weight-bolder">Karma: <img src="images/karma-green-lg.png" alt=""></h5>
@@ -112,20 +112,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6">
-                            <div class="main_block text-center mb-2">
+                        <div class="col-md-6">
+                            <div class="main_block text-center py-4 mb-2">
                                 <a href="#" class="btn shop_link">
                                     <img src="images/cart-icon.png" alt=""> <span class="pl-2">SHOP</span>
                                 </a>
                             </div>
-                            <div class="rooms_games_tabs_block text-center mb-2">                                
+                            <div class="main_block rooms_games_tabs_block text-center mb-2">                                
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <a class="nav-item nav-link w-50 active" id="nav-rooms-tab" data-toggle="tab" href="#nav-rooms" role="tab" aria-controls="nav-rooms" aria-selected="true">Rooms: 5</a>
                                         <a class="nav-item nav-link w-50" id="nav-games-tab" data-toggle="tab" href="#nav-games" role="tab" aria-controls="nav-games" aria-selected="false">Games: 52</a>
                                     </div>
                                 </nav>
-                                <div class="tab-content px-2 pb-2" id="rooms_games_block-tabContent">
+                                <div class="tab-content pb-2" id="rooms_games_block-tabContent">
                                     <div class="tab-pane fade show active" id="nav-rooms" role="tabpanel" aria-labelledby="nav-rooms-tab">
                                         <div class="table-responsive">
                                             <table class="table table-borderless">
@@ -394,85 +394,85 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="main_block text-center mb-2">
+                            <div class="main_block text-center py-4 mb-2">
                                 <a href="#" class="btn shop_link">
                                     <img src="images/cart-icon.png" alt=""> <span class="pl-2">SHOP</span>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl">
+                        <div class="col-md">
                             <div class="main_block chat_box mb-2">
                                 <h4 class="font-weight-bolder text-center">Lobby Chat</h4>
-                                <p class="help_text mb-1">
-                                    Type /help to get a list of commands
-                                </p>
                                 <div class="message_list my-2">
+                                    <p class="help_text mb-1">
+                                        Type /help to get a list of commands
+                                    </p>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hi
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hi
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hello Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hello Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Ipsum veritatis reiciendis harum repellat, blanditiis ipsa quibusdam rem. Vitae eaque quas ad aliquam, illum suscipit laborum quod soluta dolorum provident itaque!
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Ipsum veritatis reiciendis harum repellat, blanditiis ipsa quibusdam rem. Vitae eaque quas ad aliquam, illum suscipit laborum quod soluta dolorum provident itaque!
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hi
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hi
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hello
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hello
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hey
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hey
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hi
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hi
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hello
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hello
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hey
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hey
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hi
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hi
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hello
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hello
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hey
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hey
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hi
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hi
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hello
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hello
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hey
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hey
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hi
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hi
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hello
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hello
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hey
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hey
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hi
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hi
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hello
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hello
                                     </div>
                                     <div class="message_post">
-                                        <img src="images/online-user-icon.png" alt=""> <strong>nesir#3388</strong> : Hey
+                                        <img src="images/online-user-icon.png" alt=""> <span class="m_user">nesir#3388</span> : Hey
                                     </div>
                                 </div>
                                 <form action="">
-                                    <div class="input-group">
+                                    <div class="input-group input-group-sm">
                                         <input type="text" class="form-control" placeholder="Say, Hello" aria-label="Send Message Input" aria-describedby="button-send-message">
                                         <div class="input-group-append">
                                             <button class="btn btn-light btn_send" type="button" id="button-send-message">
@@ -485,16 +485,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-auto ab_block">
+                <div class="col-xl-auto d-none d-xl-block ab_block ab_block-two">
                     <img src="images/AD SPACE.jpg" class="img-fluid" alt="">
                 </div>
             </div>
+            <div class="ab_block ab_block-three text-center my-2">
+                <img src="images/AD SPACE 2.png" class="img-fluid" alt="">
+            </div>
+            <div class="ab_block ab_block-four text-center my-2">
+                <img src="images/AD SPACE V.png" class="img-fluid" alt="">
+            </div>
         </div>
 
-        <footer class="container py-3">
+        <footer class="container-fluid mb-2">
             <div class="row align-items-center">
-                <div class="col-xl-2"></div>
-                <div class="col-xl-8">
+                <div class="col-xl-2 col-lg-3"></div>
+                <div class="col-xl-8 col-lg-6">
                     <ul class="nav justify-content-center my-1">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Press Kit</a>
@@ -510,7 +516,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xl-2">
+                <div class="col-xl-2 col-lg-3">
                     <div class="social_share_container d-flex justify-content-around my-1">
                         <a href="https://www.facebook.com/colonistio/" target="_blank" class="btn-facebook">
                             <img src="images/icon_facebook.png" alt="">
