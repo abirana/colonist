@@ -15,15 +15,15 @@
         <title>Colonist.io</title>
     </head>
     <body>
-        <header class="container-fluid">
+        <header class="container-fluid res_header">
             <div class="row align-items-center custom_spacing">
                 <div class="col-lg">
                     <div class="row align-items-center custom_spacing-md">
-                        <div class="col col-xl-4 col-lg-5">
+                        <div class="col-xl-4 col-lg-5">
                             <a href="#" class="btn btn-light btn_raised w-100 my-2">Learn to Play</a>
                             <a href="#" class="btn btn-light btn_raised w-100 my-2">Join Turnament</a>
                         </div>
-                        <div class="col col-xl-5 col-lg-6">
+                        <div class="col-xl-5 col-lg-6">
                             <div class="raised_block my-2">
                                 <h6 class="font-weight-bolder">
                                     Streamlining Live <img src="images/twitch_icon.png" alt="">
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-auto text-center">
+                <div class="col-lg-auto text-center d-none d-lg-block">
                     <a href="#" class="header_logo">
                         <img src="images/logo.png" class="img-fluid" alt="">
                     </a>
@@ -57,14 +57,34 @@
             </div>
         </header>
 
+        <div class="container-fluid mobile_header d-block d-lg-none">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                        <img src="images/hamburger.svg" class="img-fluid" alt="">
+                </div>
+                <div class="col text-center">
+                    <a href="#" class="header_logo">
+                        <img src="images/logo.png" class="img-fluid" alt="">
+                    </a>
+                </div>
+                <div class="col-auto">
+                        <img src="images/hamburger.svg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+
         <div class="container py-2 main_container_block">
+            <div class="main_block text-center rotation_message mb-2">
+                <h4 class="font-weight-bolder">Rotate to landscape to play</h4>
+            </div>
+
             <div class="row custom_spacing">
                 <div class="col-xl-auto d-none d-xl-block ab_block ab_block-one">
                     <img src="images/AD SPACE.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-xl">
                     <div class="row custom_spacing">
-                        <div class="col-md">
+                        <div class="col-md col-sm-4">
                             <div class="main_block text-center mb-2">
                                 <div class="profile_img mb-3"></div>
                                 <h5 class="font-weight-bolder">nesir#3388</h5>
@@ -112,13 +132,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="main_block text-center py-4 mb-2">
+                        <div class="col-md-6 col-sm-8">
+                            <!-- <div class="main_block text-center py-4 mb-2">
                                 <a href="#" class="btn shop_link">
                                     <img src="images/cart-icon.png" alt=""> <span class="pl-2">SHOP</span>
                                 </a>
-                            </div>
-                            <div class="main_block rooms_games_tabs_block text-center mb-2">                                
+                            </div> -->
+                            <div class="main_block rooms_games_tabs_block text-center mb-2">
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <a class="nav-item nav-link w-50 active" id="nav-rooms-tab" data-toggle="tab" href="#nav-rooms" role="tab" aria-controls="nav-rooms" aria-selected="true">Rooms: 5</a>
@@ -131,12 +151,12 @@
                                             <table class="table table-borderless">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col">Karma</th>
-                                                        <th scope="col">Players</th>
-                                                        <th scope="col">Mode</th>
-                                                        <th scope="col">Title</th>
-                                                        <th scope="col">Elo</th>
-                                                        <th scope="col">Join/View</th>
+                                                        <th class="karma" scope="col">Karma</th>
+                                                        <th class="players" scope="col">Players</th>
+                                                        <th class="mode" scope="col">Mode</th>
+                                                        <th class="title" scope="col">Title</th>
+                                                        <th class="elo" scope="col">Elo</th>
+                                                        <th class="join-view" scope="col">Join/View</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -290,12 +310,12 @@
                                             <table class="table table-borderless">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col">Karma</th>
-                                                        <th scope="col">Players</th>
-                                                        <th scope="col">Mode</th>
-                                                        <th scope="col">Title</th>
-                                                        <th scope="col">Elo</th>
-                                                        <th scope="col">Join/View</th>
+                                                        <th class="karma" scope="col">Karma</th>
+                                                        <th class="players" scope="col">Players</th>
+                                                        <th class="mode" scope="col">Mode</th>
+                                                        <th class="title" scope="col">Title</th>
+                                                        <th class="elo" scope="col">Elo</th>
+                                                        <th class="join-view" scope="col">Join/View</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -317,7 +337,7 @@
                                                             <img src="images/elo-icon-1.png" alt="">
                                                         </td>
                                                         <td>
-                                                            <button class="btn btn_create w-100">Create</button>
+                                                            <button class="btn btn_spectate w-100">Spectate</button>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -338,7 +358,7 @@
                                                             <img src="images/elo-icon-2.png" alt="">
                                                         </td>
                                                         <td>
-                                                            <button class="btn btn_join w-100">Join</button>
+                                                            <button class="btn btn_spectate w-100">Spectate</button>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -489,9 +509,11 @@
                     <img src="images/AD SPACE.jpg" class="img-fluid" alt="">
                 </div>
             </div>
+
             <div class="ab_block ab_block-three text-center my-2">
                 <img src="images/AD SPACE 2.png" class="img-fluid" alt="">
             </div>
+            
             <div class="ab_block ab_block-four text-center my-2">
                 <img src="images/AD SPACE V.png" class="img-fluid" alt="">
             </div>
@@ -539,7 +561,6 @@
                     </div>
                 </div>
             </div>
-
         </footer>
         
         <!-- Optional JavaScript -->
