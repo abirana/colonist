@@ -1,19 +1,8 @@
-var mobile_btn_open = document.getElementById("mm_trigger-open");
-var mobile_btn_close = document.getElementById("mm_trigger-close");
-var mobile_block = document.getElementsByClassName("res_block");
-
 function mobileMenu_trigger() {
-    for (var i=0; i < mobile_block.length; i++) {
-        if (mobile_block[i].classList.contains('active') == false) {
-            mobile_block[i].classList.add("active");
-        } else if (mobile_block[i].classList.contains('active') == true) {
-            mobile_block[i].classList.remove("active");
-        }
-    }    
+    $(".res_block").toggleClass("active");
 }
-// console.log(mobile_block);
-mobile_btn_open.addEventListener('click', mobileMenu_trigger);
-mobile_btn_close.addEventListener('click', mobileMenu_trigger);
+$( "#mm_trigger-open" ).on( "click", mobileMenu_trigger);
+$( "#mm_trigger-close" ).on( "click", mobileMenu_trigger);
 
 jQuery(window).on("load resize" ,function( event ){
     var windoHeight = $(window).height() -400;
@@ -22,3 +11,14 @@ jQuery(window).on("load resize" ,function( event ){
         $('.chat_box .message_list').height(windoHeight*.5);
     }
 });
+
+$('#rooms_games-tabs a').on('click', function (e) {
+    e.preventDefault()
+    var tab_id = $(this).attr('id');
+    var tab_pane = $(".tab-pane[aria-labelledby="+tab_id+"]");
+    $(".tab-pane[aria-labelledby]").removeClass("show active");
+    tab_pane.addClass("active");
+    setTimeout(function(){
+        tab_pane.addClass("show")
+    }, 200);
+})
