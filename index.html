@@ -10,68 +10,59 @@
 
         <link href="https://fonts.googleapis.com/css?family=Niramit:200,300,400,500,600,700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="style.css?=1">
+        <link rel="stylesheet" href="css/style.css?=1">
 
         <title>Colonist.io</title>
     </head>
     <body>
-        <header class="container-fluid res_header">
+        <header class="container-fluid">
             <div class="row align-items-center custom_spacing">
-                <div class="col-lg">
-                    <div class="row align-items-center custom_spacing-md">
-                        <div class="col-xl-4 col-lg-5">
-                            <a href="#" class="btn btn-light btn_raised w-100 my-2">Learn to Play</a>
-                            <a href="#" class="btn btn-light btn_raised w-100 my-2">Join Turnament</a>
-                        </div>
-                        <div class="col-xl-5 col-lg-6">
-                            <div class="raised_block my-2">
-                                <h6 class="font-weight-bolder">
-                                    Streamlining Live <img src="images/twitch_icon.png" alt="">
-                                </h6>
-                                <div class="media">
-                                    <img src="images/user-1.png" class="align-self-center mr-3" alt="">
-                                    <div class="media-body">
-                                        <h6 class="font-weight-bolder m-0">Didius</h6>
-                                        27 viewers
+                <div class="col-auto col-lg">
+                    <button id="mm_trigger-open" class="mobile_btn menu_trigger"></button>
+                    <div class="res_block">
+                        <button id="mm_trigger-close" class="btn_mnav_close btn">
+                            <img src="images/cross-icon.svg" alt="">
+                        </button>
+                        <div class="row align-items-center custom_spacing-md">
+                            <div class="col-xl-4 col-lg-5">
+                                <a href="#" class="btn btn-light btn_raised w-100 my-2">Learn to Play</a>
+                                <a href="#" class="btn btn-light btn_raised w-100 my-2">Join Turnament</a>
+                            </div>
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="raised_block my-2">
+                                    <h6 class="font-weight-bolder">
+                                        Streamlining Live <img src="images/twitch_icon.png" alt="">
+                                    </h6>
+                                    <div class="media">
+                                        <img src="images/user-1.png" class="align-self-center mr-3" alt="">
+                                        <div class="media-body">
+                                            <h6 class="font-weight-bolder m-0">Didius</h6>
+                                            27 viewers
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="media">
-                                    <img src="images/user-1.png" class="align-self-center mr-3" alt="">
-                                    <div class="media-body">
-                                        <h6 class="font-weight-bolder m-0">sspacetime</h6>
-                                        14 viewers
+                                    <div class="media">
+                                        <img src="images/user-1.png" class="align-self-center mr-3" alt="">
+                                        <div class="media-body">
+                                            <h6 class="font-weight-bolder m-0">sspacetime</h6>
+                                            14 viewers
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-auto text-center d-none d-lg-block">
+                <div class="col col-lg-auto text-center">
                     <a href="#" class="header_logo">
                         <img src="images/logo.png" class="img-fluid" alt="">
                     </a>
                 </div>
-                <div class="col-lg text-lg-right">
-                    <a href="#" class="btn btn-light btn_raised my-2 px-5">Login</a>
+                <div class="col-auto col-lg text-right">
+                    <a href="#" class="btn btn-light btn_raised my-2 px-5 d-none d-lg-inline-block">Login</a>
+                    <a href="#" class="mobile_btn login_btn"></a>
                 </div>
             </div>
         </header>
-
-        <div class="container-fluid mobile_header d-block d-lg-none">
-            <div class="row align-items-center">
-                <div class="col-auto">
-                        <img src="images/hamburger.svg" class="img-fluid" alt="">
-                </div>
-                <div class="col text-center">
-                    <a href="#" class="header_logo">
-                        <img src="images/logo.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="col-auto">
-                        <img src="images/hamburger.svg" class="img-fluid" alt="">
-                </div>
-            </div>
-        </div>
 
         <div class="container py-2 main_container_block">
             <div class="main_block text-center rotation_message mb-2">
@@ -85,7 +76,7 @@
                 <div class="col-xl">
                     <div class="row custom_spacing">
                         <div class="col-md col-sm-4">
-                            <div class="main_block text-center mb-2">
+                            <div class="main_block text-center mb-2 d-none d-md-block">
                                 <div class="profile_img mb-3"></div>
                                 <h5 class="font-weight-bolder">nesir#3388</h5>
                                 <h5 class="font-weight-bolder">Rank: 53</h5>
@@ -132,7 +123,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-8">
+                        <div class="col-md-6 col-sm-8 d-none d-sm-block">
                             <!-- <div class="main_block text-center py-4 mb-2">
                                 <a href="#" class="btn shop_link">
                                     <img src="images/cart-icon.png" alt=""> <span class="pl-2">SHOP</span>
@@ -414,14 +405,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="main_block text-center py-4 mb-2">
+                            <div class="main_block text-center py-4 mb-2 d-none d-md-block">
                                 <a href="#" class="btn shop_link">
                                     <img src="images/cart-icon.png" alt=""> <span class="pl-2">SHOP</span>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md">
-                            <div class="main_block chat_box mb-2">
+                            <div class="main_block chat_box mb-2 d-sm-none d-md-block">
                                 <h4 class="font-weight-bolder text-center">Lobby Chat</h4>
                                 <div class="message_list my-2">
                                     <p class="help_text mb-1">
@@ -519,7 +510,7 @@
             </div>
         </div>
 
-        <footer class="container-fluid mb-2">
+        <footer class="container-fluid res_block mb-2">
             <div class="row align-items-center">
                 <div class="col-xl-2 col-lg-3"></div>
                 <div class="col-xl-8 col-lg-6">
@@ -568,5 +559,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
