@@ -428,6 +428,13 @@ footer a:hover{
 
 @media (max-width: 991px){
     .res_block{
+        &.active{
+            transform: translateX(0%);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    header .res_block{
         position: fixed;
         z-index: 9999;
         left: 0;
@@ -437,13 +444,7 @@ footer a:hover{
         opacity: 0;
         visibility: hidden;
         transform: translateX(-110%);
-        &.active{
-            transform: translateX(0%);
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-    header .res_block{
+
         background: $color-one;
         box-shadow: 0px 0px 5px 5px #444;
         top: 0;
@@ -470,7 +471,19 @@ footer a:hover{
             }
         }
     }
+}
+@media (max-width: 576px){
     footer.res_block{
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        width: 260px;
+        padding: 1rem;
+        transition: all 0.15s ease;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-110%);
+
         bottom: 0;
     }
 }

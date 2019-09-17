@@ -474,7 +474,14 @@ footer a:hover {
 }
 
 @media (max-width: 991px) {
-  .res_block {
+  .res_block.active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  header .res_block {
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -486,15 +493,6 @@ footer a:hover {
     visibility: hidden;
     -webkit-transform: translateX(-110%);
             transform: translateX(-110%);
-  }
-  .res_block.active {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  header .res_block {
     background: #6e5f2c;
     -webkit-box-shadow: 0px 0px 5px 5px #444;
             box-shadow: 0px 0px 5px 5px #444;
@@ -523,8 +521,20 @@ footer a:hover {
     width: 12px;
     pointer-events: none;
   }
-
+}
+@media (max-width: 576px) {
   footer.res_block {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    width: 260px;
+    padding: 1rem;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-110%);
+            transform: translateX(-110%);
     bottom: 0;
   }
 }
