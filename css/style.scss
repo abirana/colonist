@@ -1,9 +1,16 @@
 $color-one : #6e5f2c; // primary font color
 $color-two : #8c7e14; // main block border color
 $color-three : #9ec115; // main block bg color
+$color-four : #f8f9fa; // light bg color
+$color-red : #fd2424; // used for button
+$color-blue : #017fff; // used for button
+$color-green : #28a745; // used for button
 $color-gradient-one : #56ccf2;
 $color-gradient-two : #2f80ed;
+$text_color_light : #ffffff;
 $shadow-raised : 0px 2.5px 0px 1.5px #ccc;
+$main-border-radius : 12px;
+$main-transition : all 0.15s ease;
 
 html{
     min-height: 100%;
@@ -14,113 +21,119 @@ html{
     background-position: center;
     font-size: 14px;
 }
+
 body{
     font-family: 'Niramit', sans-serif;
     background: transparent;
     color: $color-one;
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-border-radius: $main-border-radius;
+        border-radius: $main-border-radius;
+        background-color: $text_color_light;
+    }
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: $main-border-radius;
+        border-radius: $main-border-radius;
+        background-color: $color-two; 
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background-color: $color-two; 
+    }
 }
-
-/* Custom Scroll Bar */
-body ::-webkit-scrollbar {
-    width: 5px;
-}
-body ::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: white;
-}
-body ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: #8c7e14; 
-}
-body ::-webkit-scrollbar-thumb:window-inactive {
-	background-color: #8c7e14; 
-}
-/* End Custom Scroll Bar */
 
 .bg_green{
-    background-color: #9fb350;
+    background-color: $color-three;
 }
 .bg_grey{
-    background-color: #8c7e14;
+    background-color: $color-two;
 }
 
-.row.custom_spacing {
-    margin-right: -3px;
-    margin-left: -3px;
+.row{
+    &.custom_spacing {
+        margin-right: -3px;
+        margin-left: -3px;
+        > div {
+            padding-right: 3px;
+            padding-left: 3px;
+        }
+    }
+    &.custom_spacing-md {
+        margin-right: -8px;
+        margin-left: -8px;
+        > div {
+           padding-right: 8px;
+           padding-left: 8px;
+       }
+    }
 }
-.row.custom_spacing > div {
-    padding-right: 3px;
-    padding-left: 3px;
-}
-.row.custom_spacing-md {
-    margin-right: -8px;
-    margin-left: -8px;
-}
-.row.custom_spacing-md > div {
-    padding-right: 8px;
-    padding-left: 8px;
-}
-/*  */
+
+/* Button Styles */
 .btn{
     font-weight: bold;
     padding: 0.5rem 1rem;
-}
-.btn_raised{
-    position: relative;
-    border-radius: 12px;
-    color: $color-one;
-    box-shadow: $shadow-raised;
-    transition: all 0.15s ease-in-out;
-    bottom: 0;
-}
-.btn_raised:hover{
-    box-shadow: 0px 0px 0px 0px #ccc;
-    bottom: -2.5px;
-}
-.btn.shop_link *{
-    vertical-align: middle;
-}
-.btn.shop_link{
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-}
-.btn.shop_link:hover{
-    color: $color-one;
-}
-.btn.btn_create{
-    background-color: #fd2424;
-    color: white;
-    font-weight: bold;
-    padding: 0px 8px 1px;
-}
-.btn.btn_create:hover{
-    background-color: #c82333;
-}
-.btn.btn_join{
-    background-color: #017fff;
-    color: white;
-    font-weight: bold;
-    padding: 0px 8px 1px;
-}
-.btn.btn_join:hover{
-    background-color: #0069d9;
-}
-.btn.btn_spectate{
-    background-color: #28a745;
-    color: white;
-    font-weight: bold;
-    padding: 0px 8px 1px;
-}
-.btn.btn_spectate:hover{
-    background-color: #000501;
+    &.btn_raised{
+        position: relative;
+        border-radius: $main-border-radius;
+        color: $color-one;
+        box-shadow: $shadow-raised;
+        transition: $main-transition;
+        bottom: 0;
+        &:hover{
+            box-shadow: 0px 0px 0px 0px #ccc;
+            bottom: -2.5px;
+        }
+    }
+    &.shop_link{
+        font-size: 21px;
+        color: $text_color_light;
+        font-weight: bold;
+         *{
+            vertical-align: middle;
+        }
+        &:hover{
+            color: $color-one;
+        }
+    }
+    
+    &.btn_create{
+        background-color: $color-red;
+        color: $text_color_light;
+        font-weight: bold;
+        padding: 0px 8px 1px;
+        &:hover{
+            background-color: darken($color-red, 12%);
+        }
+    }
+    
+    &.btn_join{
+        background-color: $color-blue;
+        color: $text_color_light;
+        font-weight: bold;
+        padding: 0px 8px 1px;
+        &:hover{
+            background-color: darken($color-blue, 12%);
+        }
+    }
+    
+    &.btn_spectate{
+        background-color: $color-green;
+        color: $text_color_light;
+        font-weight: bold;
+        padding: 0px 8px 1px;
+        &:hover{
+            background-color: darken($color-green, 12%);
+        }
+    }
 }
 
-/*  */
-.header_logo>img{
-    width: 220px;
+/* Header Parts */
+.header_logo{
+    >img{
+        width: 220px;
+    }
 }
 header{
     .mobile_btn{
@@ -129,7 +142,7 @@ header{
         width: 56px;
         height: 56px;
         display: inline-block;
-        background: #99cc00;
+        background: $color-three;
         background-repeat: no-repeat;
         background-position: center;
         border: none;
@@ -142,105 +155,115 @@ header{
             background-size: 50%, cover;
         }
         &:hover{
-            background-color: $color-three;
+            background-color: darken($color-three, 3%);
         }
     }
 }
-/*  */
+.btn_mnav_close{
+    display: none;
+}
 
-/*  */
+/* Custom 3D block */
 .raised_block{
-    background-color: #f8f9fa;
+    background-color: $color-four;
     padding: 0.5rem 1.25rem;
     box-shadow: $shadow-raised;
-    border-radius: 12px;
+    border-radius: $main-border-radius;
 }
 
 .main_block{
-    background-color: #8c7e14;
-    color: white;
+    background-color: $color-two;
+    color: $text_color_light;
     padding: 18px 18px;
-    border-radius: 12px;
+    border-radius: $main-border-radius;
     box-shadow: inset 0 0 2px 3px $color-one;
     position: relative;
     z-index: 0;
-}
-.main_block:before {
-    content: "";
-    position: absolute;
-    background: #9ec115;
-    display: block;
-    border-radius: 12px;
-    top: 6px;
-    left: 6px;
-    bottom: 6px;
-    right: 6px;
-    z-index: -1;
-}
-.main_block:after {
-    content: "";
-    position: absolute;
-    background: transparent;
-    box-shadow: inset 0px -2px 2px 1px rgba(215, 215, 215, 0.5);
-    display: block;
-    border-radius: 12px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
-.main_block table{
-    color: white;
+    &:before {
+        content: "";
+        position: absolute;
+        background: $color-three;
+        display: block;
+        border-radius: $main-border-radius;
+        top: 6px;
+        left: 6px;
+        bottom: 6px;
+        right: 6px;
+        z-index: -1;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        background: transparent;
+        box-shadow: inset 0px -2px 2px 1px rgba(215, 215, 215, 0.5);
+        display: block;
+        border-radius: $main-border-radius;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+    table{
+        color: $text_color_light;
+    }
 }
 
-/*  */
-/* .main_container_block>.row>[class|=col]{
-    display: -ms-flexbox!important;
-    display: flex!important;
-    -ms-flex-wrap: wrap!important;
-    flex-wrap: wrap!important;
-}
-.main_container_block>.row>[class|=col]>*{
-    width: 100%;
-} */
-/*  */
+// .main_container_block{
+//     &>.row{
+//         &>[class|=col]{
+//             display: -ms-flexbox!important;
+//             display: flex!important;
+//             -ms-flex-wrap: wrap!important;
+//             flex-wrap: wrap!important;
+//             &>*{
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }
 
 /* Chat Box */
-.chat_box .message_list{
-    height: 454px;
-    overflow-y: auto;
-    margin: 0 -0.5rem;
-}
-.chat_box .message_list .message_post{
-    margin-bottom: 0.25rem;
-    padding: 0 0.5rem;
-    border-radius: 5px;
-}
-.chat_box .message_list .help_text{
-    font-size: 15px;
-    padding: 0 0.5rem;
-}
-.chat_box .message_list .message_post .m_user{
-    font-size: 15px;
-    font-weight: bold;
-}
-.chat_box .message_list .message_post:hover{
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.chat_box form .form-control{
-    font-size: 12px;
-}
-.chat_box form button.btn_send{
-    padding: 0rem 0.7rem;
-    border: 1px solid #ccc;
-    line-height: 0 !important;
-}
-.chat_box form button.btn_send>img{
-    width: 12px;
+.chat_box{
+    .message_list{
+        height: 454px;
+        overflow-y: auto;
+        margin: 0 -0.5rem;
+        .message_post{
+            margin-bottom: 0.25rem;
+            padding: 0 0.5rem;
+            border-radius: 5px;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+            .m_user{
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+        .help_text{
+            font-size: 15px;
+            padding: 0 0.5rem;
+        }
+    }
+    form{
+        .form-control{
+            font-size: 12px;
+        }
+        button{
+            &.btn_send{
+                padding: 0rem 0.7rem;
+                border: 1px solid #ccc;
+                line-height: 0 !important;
+                >img{
+                    width: 12px;
+                }
+            }
+        }
+    }
 }
 
-/*  */
+/* Profile Details */
 .profile_img{
     width: 137px;
     height: 87px;
@@ -248,138 +271,153 @@ header{
     background: url(/colonist/images/user-img.png) no-repeat;
     background-size: contain;
 }
-/*  */
 
-/* Players List */
+/* Online Players List */
 .online_players_list{
     height: 231px;
     overflow-y: auto;
     margin: 0 -0.5rem;
-}
-.online_players_list>*{
-    padding: 0 0.5rem;
-}
-.online_players_list .player_name{
-    padding-bottom: 0.25rem;
-    border-radius: 5px;
-    padding: 0 0.5rem;
-}
-.online_players_list .player_name:hover{
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-/*  */
-.rooms_games_tabs_block{
-    padding: 6px;
-}
-.rooms_games_tabs_block .nav-tabs{
-    background-color: #8c7e14;    
-}
-.rooms_games_tabs_block .nav-tabs .nav-link{
-    background-color: #9fb350;
-    color: white;
-    font-weight: bold;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-.rooms_games_tabs_block .nav-tabs .nav-link.active{
-    background-color: #9ec115;
-    border: none;
-}
-.rooms_games_tabs_block .tab-content{
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    padding-left: 6px;
-    padding-right: 6px;
-}
-.rooms_games_tabs_block .tab-content .tab-pane{
-    height: 390px;
-    overflow-y: auto;
-    @media (max-width: 767px) {
-        height: 243px;
+    &>*{
+        padding: 0 0.5rem;
+    }
+    .player_name{
+        padding-bottom: 0.25rem;
+        border-radius: 5px;
+        padding: 0 0.5rem;
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.1);
+        }
     }
 }
-.rooms_games_tabs_block:nth-child(2) .tab-content .tab-pane{
-    height: 280px;
+
+/* Rooms & Games Tabs Block */
+.rooms_games_tabs_block{
+    padding: 6px;
+    .nav-tabs{
+        background-color: $color-two;    
+        .nav-link{
+            background-color: #9fb350;
+            color: $text_color_light;
+            font-weight: bold;
+            border-top-left-radius: $main-border-radius;
+            border-top-right-radius: $main-border-radius;
+        }
+        .nav-link.active{
+            background-color: $color-three;
+            border: none;
+        }
+    }
+    .tab-content{
+        border-bottom-left-radius: $main-border-radius;
+        border-bottom-right-radius: $main-border-radius;
+        padding-left: 6px;
+        padding-right: 6px;
+        .tab-pane{
+            height: 390px;
+            overflow-y: auto;
+            @media (max-width: 767px) {
+                height: 243px;
+            }
+        }
+        table{
+            th{
+                padding: .3rem .2rem;
+                vertical-align: middle;
+                &.karma {
+                    width: 60px;
+                }
+                &.players {
+                    width: 85px;
+                }
+                &.mode {
+                    width: 35px;
+                }
+                &.elo {
+                    width: 60px;
+                }
+                &.join-view {
+                    width: 70px;
+                }
+            }
+            td{
+                padding: .2rem;
+                vertical-align: middle;
+            }
+            tbody{
+                tr{
+                    &>td:empty{
+                        height: 30px;
+                    }
+                    &:nth-of-type(odd) {
+                        background-color: rgba(255,255,255,.1);
+                    }
+                    &:hover {
+                        background-color: rgba(0,0,0,.075);
+                    }
+                }
+            }
+        }
+    }
+    &:nth-child(2){
+        .tab-content{
+            .tab-pane{
+                height: 280px;
+            }
+        }
+    }
+    
 }
 
-.rooms_games_tabs_block .tab-content table th.karma {
-    width: 60px;
-}
-.rooms_games_tabs_block .tab-content table th.players {
-    width: 85px;
-}
-.rooms_games_tabs_block .tab-content table th.mode {
-    width: 35px;
-}
-.rooms_games_tabs_block .tab-content table th.elo {
-    width: 60px;
-}
-.rooms_games_tabs_block .tab-content table th.join-view {
-    width: 70px;
-}
-
-.rooms_games_tabs_block .tab-content table th {
-    padding: .3rem .2rem;
-    vertical-align: middle;
-}
-.rooms_games_tabs_block .tab-content table td {
-    padding: .2rem;
-    vertical-align: middle;
-}
-.rooms_games_tabs_block .tab-content table tbody tr>td:empty{
-    height: 30px;
-}
-.rooms_games_tabs_block .tab-content table tbody tr:nth-of-type(odd) {
-    background-color: rgba(255,255,255,.1);
-}
-.rooms_games_tabs_block .tab-content table tbody tr:hover {
-    background-color: rgba(0,0,0,.075);
+.player_count{
+    &_one,
+    &_two,
+    &_three,
+    &_four{
+        >img{
+            opacity: 0.5;
+        }
+    }
+    &_one>img:nth-child(1),
+    &_two>img:nth-child(1),
+    &_two>img:nth-child(2),
+    &_three>img:nth-child(1),
+    &_three>img:nth-child(2),
+    &_three>img:nth-child(3),
+    &_four>img:nth-child(1),
+    &_four>img:nth-child(2),
+    &_four>img:nth-child(3),
+    &_four>img:nth-child(4){
+        opacity: 1;
+    }
 }
 
-.player_count_one>img,
-.player_count_two>img,
-.player_count_three>img,
-.player_count_four>img{
-    opacity: 0.5;
-}
-
-.player_count_one>img:nth-child(1),
-.player_count_two>img:nth-child(1),
-.player_count_two>img:nth-child(2),
-.player_count_three>img:nth-child(1),
-.player_count_three>img:nth-child(2),
-.player_count_three>img:nth-child(3),
-.player_count_four>img:nth-child(1),
-.player_count_four>img:nth-child(2),
-.player_count_four>img:nth-child(3),
-.player_count_four>img:nth-child(4){
-    opacity: 1;
-}
 
 /*  */
-footer a{
-    color: white;
-    font-weight: bold;
+footer{
+    a{
+        color: $text_color_light;
+        font-weight: bold;
+        &:hover{
+            color: $color-one;
+        }
+    }
 }
-footer a:hover{
-    color: $color-one;
-}
+
 .social_share_container{
-    background-color: white;
+    background-color: $text_color_light;
     box-shadow: $shadow-raised;
     padding: 0.5rem 0.75rem;
-    border-radius: 12px;
-}
-.social_share_container a{
-    display: inline-block;
-    margin: 0 1px;
-}
-.social_share_container a:hover{
-    opacity: 0.7;
-}
-.social_share_container a>img{
-    width: 20px;
+    border-radius: $main-border-radius;
+    a{
+        display: inline-block;
+        margin: 0 1px;
+        &:hover{
+            opacity: 0.7;
+        }
+        &>img{
+            width: 20px;
+        }
+    }
 }
 
 
@@ -422,9 +460,6 @@ footer a:hover{
         display: none;
     }
 }
-.btn_mnav_close{
-    display: none;
-}
 
 @media (max-width: 991px){
     .res_block{
@@ -440,7 +475,7 @@ footer a:hover{
         left: 0;
         width: 260px;
         padding: 1rem;
-        transition: all 0.15s ease;
+        transition: $main-transition;
         opacity: 0;
         visibility: hidden;
         transform: translateX(-110%);
@@ -453,7 +488,7 @@ footer a:hover{
             content: '';
             display: inline-block;
             background-color: $color-one;
-            color: white;
+            color: $text_color_light;
             text-align: center;
             font-size: 20px;
             width: 40px;
@@ -479,7 +514,7 @@ footer a:hover{
         left: 0;
         width: 260px;
         padding: 1rem;
-        transition: all 0.15s ease;
+        transition: $main-transition;
         opacity: 0;
         visibility: hidden;
         transform: translateX(-110%);

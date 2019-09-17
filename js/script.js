@@ -15,3 +15,10 @@ function mobileMenu_trigger() {
 mobile_btn_open.addEventListener('click', mobileMenu_trigger);
 mobile_btn_close.addEventListener('click', mobileMenu_trigger);
 
+jQuery(window).on("load resize" ,function( event ){
+    var windoHeight = $(window).height() -400;
+    if(jQuery(window).width() < 576){
+        $('.online_players_list').height(windoHeight*.5);
+        $('.chat_box .message_list').height(windoHeight*.5);
+    }
+});
