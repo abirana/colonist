@@ -369,9 +369,6 @@ header{
             height: 390px;
             overflow-y: auto;
         }
-        // .dataTables_scrollBody{
-        //     height: 354px !important;
-        // }
         table{
             th{
                 padding: .3rem .2rem;
@@ -507,9 +504,6 @@ footer{
     .rooms_games_tabs_block .tab-content .tab-pane {
         height: 243px;
     }
-    // .rooms_games_tabs_block .tab-content .tab-pane .dataTables_scrollBody{
-    //     height: 318px !important;
-    // }
     .chat_box .message_list {
         height: 197px;
     }
@@ -538,9 +532,6 @@ footer{
     .rooms_games_tabs_block .tab-content .tab-pane {
         height: 306px;
     }
-    // .rooms_games_tabs_block .tab-content .tab-pane .dataTables_scrollBody{
-    //     height: 270px !important;
-    // }
     .chat_box .message_list {
         height: 114px;
     }
@@ -552,9 +543,6 @@ footer{
     .rooms_games_tabs_block .tab-content .tab-pane {
         height: 290px;
     }
-    // .rooms_games_tabs_block .tab-content .tab-pane .dataTables_scrollBody{
-    //     height: 254px !important;
-    // }
     .online_players_list {
         height: 131px;
     }
@@ -567,6 +555,16 @@ footer{
         }
     }    
 }
+
+@media (max-height: 360px){
+    .rooms_games_tabs_block .tab-content .tab-pane {
+        height: 286px;
+    }
+    .chat_box .message_list {
+        height: 95px;
+    }
+}
+
 @media only screen and (orientation: landscape), only screen and (min-width: 576px) {
     .rotation_message {
         display: none;
@@ -624,9 +622,7 @@ footer{
             height: 40px;
             right: 15px;
             top: 15px;
-            // transform: translateX(99%);
             position: absolute;
-            // padding: 0px 10px 6px;
             border: none;
             border-radius: 50%;
             >img{

@@ -486,6 +486,15 @@ footer a:hover {
     height: 450px;
   }
 }
+@media (max-height: 360px) {
+  .rooms_games_tabs_block .tab-content .tab-pane {
+    height: 286px;
+  }
+
+  .chat_box .message_list {
+    height: 95px;
+  }
+}
 @media only screen and (orientation: landscape), only screen and (min-width: 576px) {
   .rotation_message {
     display: none;
