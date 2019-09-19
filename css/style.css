@@ -351,21 +351,6 @@ header .header_link {
   padding: .3rem .2rem;
   vertical-align: middle;
 }
-.rooms_games_tabs_block .tab-content table th.karma {
-  width: 60px;
-}
-.rooms_games_tabs_block .tab-content table th.players {
-  width: 85px;
-}
-.rooms_games_tabs_block .tab-content table th.mode {
-  width: 35px;
-}
-.rooms_games_tabs_block .tab-content table th.elo {
-  width: 60px;
-}
-.rooms_games_tabs_block .tab-content table th.join-view {
-  width: 70px;
-}
 .rooms_games_tabs_block .tab-content table td {
   padding: .2rem;
   vertical-align: middle;
@@ -458,15 +443,22 @@ footer a:hover {
     padding-left: 0;
     margin-bottom: 10px;
   }
-  header.container-fluid .row > :first-child {
+  header.container-fluid .row > :nth-child(2) {
     -ms-flex-order: 2;
     -webkit-box-ordinal-group: 3;
             order: 2;
   }
-  header.container-fluid .row > :last-child {
+  header.container-fluid .row > :nth-child(3) {
     -ms-flex-order: 3;
     -webkit-box-ordinal-group: 4;
             order: 3;
+  }
+
+  .header_logo > img {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    padding: 0 !important;
+    width: 172px;
   }
 
   .rooms_games_tabs_block .tab-content .tab-pane {
@@ -474,7 +466,7 @@ footer a:hover {
   }
 
   .chat_box .message_list {
-    height: 77px;
+    height: 114px;
   }
 }
 @media only screen and (max-height: 767px) and (min-width: 768px) {
