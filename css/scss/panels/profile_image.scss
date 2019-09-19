@@ -1,0 +1,40 @@
+.profile_img{
+    width: 137px;
+    height: 87px;
+    margin: auto;
+    background-size: contain;
+    background-color: $color-five;
+    box-shadow: inset 0px -2.5px 2px 3px $color-two;
+    border-radius: 14px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $main-transition;
+    bottom: 0;
+    &:before {
+        content: "";
+        position: absolute;
+        background: transparent;
+        box-shadow: inset 0px 5px 3px 1px rgba(215, 215, 215, 0.5);
+        display: block;
+        border-radius: 14px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+    &:hover {
+        box-shadow: inset 0px 0px 2px 3px $color-two;
+        bottom: -2.5px;
+        &:before {
+        box-shadow: inset 0px 5px 2px 0px rgba(215, 215, 215, 0.5);
+        }
+    }
+    img{
+        max-width: 137px;
+    }
+}

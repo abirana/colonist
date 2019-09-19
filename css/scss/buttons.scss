@@ -1,0 +1,58 @@
+.btn{
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    &:focus{
+        box-shadow: none !important;
+        border-color: $color-one;
+    }
+    &.btn_raised{
+        position: relative;
+        border-radius: $main-border-radius;
+        color: $color-one;
+        box-shadow: $shadow-raised;
+        transition: $main-transition;
+        bottom: 0;
+        &:hover{
+            box-shadow: 0px 0px 0px 0px #ccc;
+            bottom: -2.5px;
+        }
+    }
+    &.shop_link{
+        font-size: 21px;
+        color: $text_color_light;
+        font-weight: bold;
+         *{
+            vertical-align: middle;
+        }
+        &:hover{
+            color: $color-one;
+        }
+    }
+    &.btn_create{
+        background-color: $color-red;
+        color: $text_color_light;
+        font-weight: bold;
+        padding: 0px 8px 1px;
+        &:hover{
+            background-color: darken($color-red, 12%);
+        }
+    }
+    &.btn_join{
+        background-color: $color-blue;
+        color: $text_color_light;
+        font-weight: bold;
+        padding: 0px 8px 1px;
+        &:hover{
+            background-color: darken($color-blue, 12%);
+        }
+    }
+    &.btn_spectate{
+        background-color: $color-green;
+        color: $text_color_light;
+        font-weight: bold;
+        padding: 0px 8px 1px;
+        &:hover{
+            background-color: darken($color-green, 12%);
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.header_logo{
+    >img{
+        width: 220px;
+    }
+}
+header{
+    .mobile_btn{
+        border-radius: 5px;
+        box-shadow: inset 0px -1px 1px 2px transparentize($color-one, 0.5);
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+        background: $color-three;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        &.menu_trigger{
+            background-image: url(../images/hamburger.svg);
+            background-size: 65%, cover;
+        }
+        &.login_btn{
+            background-image: url(../images/user-icon.png);
+            background-size: 50%, cover;
+        }
+        &:hover{
+            background-color: darken($color-three, 3%);
+        }
+    }
+    .header_link{
+        min-width: 140px;
+        display: block;
+    }
+}
+.btn_mnav_close{
+    display: none;
+}

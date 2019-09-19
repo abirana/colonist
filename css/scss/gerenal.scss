@@ -1,0 +1,55 @@
+html{
+    min-height: 100%;
+    background: rgb(86,204,242);
+    background: url(../images/page_bg.png), radial-gradient(circle, $color-gradient-one 0%, $color-gradient-two 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 14px;
+}
+
+body{
+    font-family: 'Niramit', sans-serif;
+    background: transparent;
+    color: $color-one;
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-border-radius: $main-border-radius;
+        border-radius: $main-border-radius;
+        background-color: $text_color_light;
+    }
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: $main-border-radius;
+        border-radius: $main-border-radius;
+        background-color: $color-two; 
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background-color: $color-two; 
+    }
+}
+
+.row{
+    &.custom_spacing {
+        margin-right: -3px;
+        margin-left: -3px;
+        > div {
+            padding-right: 3px;
+            padding-left: 3px;
+        }
+    }
+    &.custom_spacing-md {
+        margin-right: -8px;
+        margin-left: -8px;
+        > div {
+           padding-right: 8px;
+           padding-left: 8px;
+       }
+    }
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: $color-one;
+}

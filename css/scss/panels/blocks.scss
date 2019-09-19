@@ -1,0 +1,44 @@
+.raised_block{
+    background-color: $color-four;
+    padding: 0.5rem 1.25rem;
+    box-shadow: $shadow-raised;
+    border-radius: $main-border-radius;
+}
+
+.main_block{
+    background-color: $color-two;
+    color: $text_color_light;
+    padding: 18px 18px;
+    border-radius: $main-border-radius;
+    box-shadow: inset 0 0 2px 3px $color-one;
+    position: relative;
+    z-index: 0;
+    &:before {
+        content: "";
+        position: absolute;
+        background: $color-three;
+        display: block;
+        border-radius: $main-border-radius;
+        top: 6px;
+        left: 6px;
+        bottom: 6px;
+        right: 6px;
+        z-index: -1;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        background: transparent;
+        box-shadow: inset 0px -2px 2px 1px rgba(215, 215, 215, 0.5);
+        display: block;
+        border-radius: $main-border-radius;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+    table{
+        color: $text_color_light;
+    }
+}

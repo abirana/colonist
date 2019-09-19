@@ -28,20 +28,6 @@ body ::-webkit-scrollbar-thumb:window-inactive {
   background-color: #8c7e14;
 }
 
-.bg_green {
-  background-color: #9ec115;
-}
-
-.bg_grey {
-  background-color: #8c7e14;
-}
-
-.form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-color: #6e5f2c;
-}
-
 .row.custom_spacing {
   margin-right: -3px;
   margin-left: -3px;
@@ -59,7 +45,12 @@ body ::-webkit-scrollbar-thumb:window-inactive {
   padding-left: 8px;
 }
 
-/* Button Styles */
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #6e5f2c;
+}
+
 .btn {
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -123,7 +114,6 @@ body ::-webkit-scrollbar-thumb:window-inactive {
   background-color: #1c7631;
 }
 
-/* Header Parts */
 .header_logo > img {
   width: 220px;
 }
@@ -160,7 +150,6 @@ header .header_link {
   display: none;
 }
 
-/* Custom 3D block */
 .raised_block {
   background-color: #f8f9fa;
   padding: 0.5rem 1.25rem;
@@ -209,7 +198,6 @@ header .header_link {
   color: #ffffff;
 }
 
-/* Chat Box */
 .chat_box .message_list {
   height: 454px;
   overflow-y: auto;
@@ -246,7 +234,6 @@ header .header_link {
   border-color: #6e5f2c;
 }
 
-/* Profile Details */
 .profile_img {
   width: 137px;
   height: 87px;
@@ -299,7 +286,6 @@ header .header_link {
   max-width: 137px;
 }
 
-/* Online Players List */
 .online_players_list {
   height: 231px;
   overflow-y: auto;
@@ -317,7 +303,6 @@ header .header_link {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Rooms & Games Tabs Block */
 .rooms_games_tabs_block {
   padding: 6px;
 }
@@ -375,7 +360,6 @@ header .header_link {
   opacity: 1;
 }
 
-/*  */
 footer a {
   color: #ffffff;
   font-weight: bold;

@@ -1,0 +1,27 @@
+footer{
+    a{
+        color: $text_color_light;
+        font-weight: bold;
+        &:hover{
+            color: $color-one;
+        }
+    }
+}
+
+.social_share_container{
+    background-color: $text_color_light;
+    box-shadow: $shadow-raised;
+    padding: 0.5rem 0.75rem;
+    border-radius: $main-border-radius;
+    max-width: 200px;
+    a{
+        display: inline-block;
+        margin: 0 1px;
+        &:hover{
+            opacity: 0.7;
+        }
+        &>img{
+            width: 20px;
+        }
+    }
+}

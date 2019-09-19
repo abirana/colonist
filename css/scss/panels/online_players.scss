@@ -1,0 +1,16 @@
+.online_players_list{
+    height: 231px;
+    overflow-y: auto;
+    margin: 0 -0.5rem;
+    &>*{
+        padding: 0 0.5rem;
+    }
+    .player_name{
+        padding-bottom: 0.25rem;
+        border-radius: 5px;
+        padding: 0 0.5rem;
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}

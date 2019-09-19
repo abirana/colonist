@@ -1,0 +1,41 @@
+.chat_box{
+    .message_list{
+        height: 454px;
+        overflow-y: auto;
+        margin: 0 -0.5rem;
+        .message_post{
+            margin-bottom: 0.25rem;
+            padding: 0 0.5rem;
+            border-radius: 5px;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+            .m_user{
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+        .help_text{
+            font-size: 15px;
+            padding: 0 0.5rem;
+        }
+    }
+    form{
+        .form-control{
+            font-size: 12px;
+        }
+        button{
+            &.btn_send{
+                padding: 0rem 0.7rem;
+                border: 1px solid #ccc;
+                line-height: 0 !important;
+                >img{
+                    width: 12px;
+                }
+                &:focus{
+                    border-color: $color-one;
+                }            
+            }
+        }
+    }
+}

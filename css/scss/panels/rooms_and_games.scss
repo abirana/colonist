@@ -1,0 +1,100 @@
+.rooms_games_tabs_block{
+    padding: 6px;
+    .nav-tabs{
+        background-color: $color-two;    
+        .nav-link{
+            background-color: #9fb350;
+            color: $text_color_light;
+            font-weight: bold;
+            border-top-left-radius: $main-border-radius;
+            border-top-right-radius: $main-border-radius;
+            border: none;
+            padding: 0.6rem 1rem;
+        }
+        .nav-link.active{
+            background-color: $color-three;
+            border: none;
+        }
+    }
+    .tab-content{
+        border-bottom-left-radius: $main-border-radius;
+        border-bottom-right-radius: $main-border-radius;
+        padding-left: 6px;
+        padding-right: 6px;
+        .tab-pane{
+            height: 390px;
+            overflow-y: auto;
+        }
+        table{
+            th{
+                padding: .3rem .2rem;
+                vertical-align: middle;
+                // &.karma {
+                //     width: 60px;
+                // }
+                // &.players {
+                //     width: 85px;
+                // }
+                // &.mode {
+                //     width: 35px;
+                // }
+                // &.title {
+                // }
+                // &.elo {
+                //     width: 60px;
+                // }
+                // &.join-view {
+                //     width: 70px;
+                // }
+            }
+            td{
+                padding: .2rem;
+                vertical-align: middle;
+            }
+            tbody{
+                tr{
+                    &>td:empty{
+                        height: 30px;
+                    }
+                    &:nth-of-type(odd) {
+                        background-color: rgba(255,255,255,.1);
+                    }
+                    &:hover {
+                        background-color: rgba(0,0,0,.075);
+                    }
+                }
+            }
+        }
+    }
+    &:nth-child(2){
+        .tab-content{
+            .tab-pane{
+                height: 280px;
+            }
+        }
+    }
+    
+}
+
+.player_count{
+    &_one,
+    &_two,
+    &_three,
+    &_four{
+        >img{
+            opacity: 0.5;
+        }
+    }
+    &_one>img:nth-child(1),
+    &_two>img:nth-child(1),
+    &_two>img:nth-child(2),
+    &_three>img:nth-child(1),
+    &_three>img:nth-child(2),
+    &_three>img:nth-child(3),
+    &_four>img:nth-child(1),
+    &_four>img:nth-child(2),
+    &_four>img:nth-child(3),
+    &_four>img:nth-child(4){
+        opacity: 1;
+    }
+}
