@@ -301,6 +301,8 @@ header{
             font-weight: bold;
             border-top-left-radius: $main-border-radius;
             border-top-right-radius: $main-border-radius;
+            border: none;
+            padding: 0.6rem 1rem;
         }
         .nav-link.active{
             background-color: $color-three;
@@ -418,7 +420,6 @@ footer{
     }
 }
 
-
 @media (min-width: 1400px){
     .container {
         max-width: 1340px;
@@ -454,7 +455,30 @@ footer{
         height: 197px;
     }
 }
-@media only screen and (min-height: 720px) and (min-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px){
+    header.container-fluid{
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 10px;
+        .row{
+            >:first-child{
+                -ms-flex-order: 2;
+                order: 2;
+            }
+            >:last-child{
+                -ms-flex-order: 3;
+                order: 3;
+            }
+        }
+    }
+    .rooms_games_tabs_block .tab-content .tab-pane {
+        height: 306px;
+    }
+    .chat_box .message_list {
+        height: 70px;
+    }
+}
+@media only screen and (max-height: 768px) and (min-width: 768px) {
     .chat_box .message_list {
         height: 354px;
     }
@@ -464,6 +488,14 @@ footer{
     .online_players_list {
         height: 131px;
     }
+    .ab_block{
+        &.ab_block-one,
+        &.ab_block-two{
+            img{
+                height: 450px;
+            }
+        }
+    }    
 }
 @media only screen and (orientation: landscape), only screen and (min-width: 576px) {
     .rotation_message {

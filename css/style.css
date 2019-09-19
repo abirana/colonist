@@ -268,6 +268,8 @@ header .mobile_btn:hover {
   font-weight: bold;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  border: none;
+  padding: 0.6rem 1rem;
 }
 .rooms_games_tabs_block .nav-tabs .nav-link.active {
   background-color: #9ec115;
@@ -388,7 +390,32 @@ footer a:hover {
     height: 197px;
   }
 }
-@media only screen and (min-height: 720px) and (min-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px) {
+  header.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+  header.container-fluid .row > :first-child {
+    -ms-flex-order: 2;
+    -webkit-box-ordinal-group: 3;
+            order: 2;
+  }
+  header.container-fluid .row > :last-child {
+    -ms-flex-order: 3;
+    -webkit-box-ordinal-group: 4;
+            order: 3;
+  }
+
+  .rooms_games_tabs_block .tab-content .tab-pane {
+    height: 306px;
+  }
+
+  .chat_box .message_list {
+    height: 70px;
+  }
+}
+@media only screen and (max-height: 768px) and (min-width: 768px) {
   .chat_box .message_list {
     height: 354px;
   }
@@ -399,6 +426,10 @@ footer a:hover {
 
   .online_players_list {
     height: 131px;
+  }
+
+  .ab_block.ab_block-one img, .ab_block.ab_block-two img {
+    height: 450px;
   }
 }
 @media only screen and (orientation: landscape), only screen and (min-width: 576px) {

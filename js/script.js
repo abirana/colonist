@@ -4,17 +4,23 @@ function mobileMenu_trigger() {
 $( "#mm_trigger-open" ).on( "click", mobileMenu_trigger);
 $( "#mm_trigger-close" ).on( "click", mobileMenu_trigger);
 
-jQuery(window).on("load resize" ,function( event ){
-    var windoHeight = $(window).height() -400;
-    if(jQuery(window).width() < 576){
+$(window).on("load resize" ,function( event ){
+    var windoHeight = $(window).height() - 400;
+    if($(window).width() < 576){
         $(".online_players_list").height(windoHeight*.5);
         $(".chat_box .message_list").height(windoHeight*.5);
     }
-    if(jQuery(window).width() < 992){
+    if($(window).width() < 992){
         $( "header .res_block" ).append( $( "footer" ) );
     }
-    if(jQuery(window).width() > 991){
+    if($(window).width() > 991){
         $( "body" ).append( $( "footer" ) );
+    }
+    if($(window).width() > 575 && $(window).width() < 768){
+        $( ".chat_box" ).parent().prepend( $( "header" ) );
+    }
+    else{
+        $( "body" ).prepend( $( "header" ) );
     }
 });
 
