@@ -283,11 +283,6 @@ header .mobile_btn:hover {
   height: 390px;
   overflow-y: auto;
 }
-@media (max-width: 767px) {
-  .rooms_games_tabs_block .tab-content .tab-pane {
-    height: 243px;
-  }
-}
 .rooms_games_tabs_block .tab-content table th {
   padding: .3rem .2rem;
   vertical-align: middle;
@@ -346,6 +341,7 @@ footer a:hover {
           box-shadow: 0px 2.5px 0px 1.5px #ccc;
   padding: 0.5rem 0.75rem;
   border-radius: 12px;
+  max-width: 200px;
 }
 .social_share_container a {
   display: inline-block;
@@ -383,6 +379,28 @@ footer a:hover {
     display: none;
   }
 }
+@media (max-width: 767px) {
+  .rooms_games_tabs_block .tab-content .tab-pane {
+    height: 243px;
+  }
+
+  .chat_box .message_list {
+    height: 197px;
+  }
+}
+@media only screen and (min-height: 720px) and (min-width: 768px) {
+  .chat_box .message_list {
+    height: 354px;
+  }
+
+  .rooms_games_tabs_block .tab-content .tab-pane {
+    height: 290px;
+  }
+
+  .online_players_list {
+    height: 131px;
+  }
+}
 @media only screen and (orientation: landscape), only screen and (min-width: 576px) {
   .rotation_message {
     display: none;
@@ -407,7 +425,7 @@ footer a:hover {
     z-index: 9999;
     left: 0;
     width: 260px;
-    padding: 1rem;
+    padding: 3rem 0 0rem;
     -webkit-transition: all 0.15s ease;
     transition: all 0.15s ease;
     opacity: 0;
@@ -419,23 +437,34 @@ footer a:hover {
             box-shadow: 0px 0px 5px 5px #444;
     top: 0;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  header .res_block > * {
+    padding: 1rem;
   }
   header .res_block .btn_mnav_close {
     content: '';
     display: inline-block;
-    background-color: #6e5f2c;
+    background-color: #8c7e14;
     color: #ffffff;
     text-align: center;
     font-size: 20px;
+    line-height: 0;
     width: 40px;
-    right: 0;
-    top: 25px;
-    -webkit-transform: translateX(99%);
-            transform: translateX(99%);
+    height: 40px;
+    right: 15px;
+    top: 15px;
     position: absolute;
-    padding: 0px 10px 6px;
     border: none;
-    border-radius: 3px;
+    border-radius: 50%;
   }
   header .res_block .btn_mnav_close > img {
     max-width: 100%;
@@ -443,7 +472,7 @@ footer a:hover {
     pointer-events: none;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   footer.res_block {
     position: fixed;
     z-index: 9999;
