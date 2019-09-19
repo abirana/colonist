@@ -2,6 +2,7 @@ $color-one : #6e5f2c; // primary font color
 $color-two : #8c7e14; // main block border color
 $color-three : #9ec115; // main block bg color
 $color-four : #f8f9fa; // light bg color
+$color-five : #bfb21e; // used in main user img bg
 $color-red : #fd2424; // used for button
 $color-blue : #017fff; // used for button
 $color-green : #28a745; // used for button
@@ -51,6 +52,11 @@ body{
     background-color: $color-two;
 }
 
+.form-control:focus{
+    box-shadow: none;
+    border-color: $color-one;
+}
+
 .row{
     &.custom_spacing {
         margin-right: -3px;
@@ -74,6 +80,10 @@ body{
 .btn{
     font-weight: bold;
     padding: 0.5rem 1rem;
+    &:focus{
+        box-shadow: none !important;
+        border-color: $color-one;
+    }
     &.btn_raised{
         position: relative;
         border-radius: $main-border-radius;
@@ -97,7 +107,6 @@ body{
             color: $color-one;
         }
     }
-    
     &.btn_create{
         background-color: $color-red;
         color: $text_color_light;
@@ -107,7 +116,6 @@ body{
             background-color: darken($color-red, 12%);
         }
     }
-    
     &.btn_join{
         background-color: $color-blue;
         color: $text_color_light;
@@ -117,7 +125,6 @@ body{
             background-color: darken($color-blue, 12%);
         }
     }
-    
     &.btn_spectate{
         background-color: $color-green;
         color: $text_color_light;
@@ -138,9 +145,9 @@ body{
 header{
     .mobile_btn{
         border-radius: 5px;
-        box-shadow: inset 0px -1px 5px 2px #787878;
-        width: 56px;
-        height: 56px;
+        box-shadow: inset 0px -1px 1px 2px transparentize($color-one, 0.5);
+        width: 45px;
+        height: 45px;
         display: inline-block;
         background: $color-three;
         background-repeat: no-repeat;
@@ -157,6 +164,14 @@ header{
         &:hover{
             background-color: darken($color-three, 3%);
         }
+    }
+    .header_link{
+        min-width: 140px;
+        // max-width: 180px;
+        display: block;
+    }
+    .streaming_stats{
+        // max-width: 220px;
     }
 }
 .btn_mnav_close{
@@ -258,6 +273,9 @@ header{
                 >img{
                     width: 12px;
                 }
+                &:focus{
+                    border-color: $color-one;
+                }            
             }
         }
     }
@@ -268,8 +286,44 @@ header{
     width: 137px;
     height: 87px;
     margin: auto;
-    background: url(/colonist/images/user-img.png) no-repeat;
+    // background: url(/colonist/images/user-img.png) no-repeat;
     background-size: contain;
+    background-color: $color-five;
+    box-shadow: inset 0px -2.5px 2px 3px $color-two;
+    border-radius: 14px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $main-transition;
+    bottom: 0;
+    &:before {
+        content: "";
+        position: absolute;
+        background: transparent;
+        box-shadow: inset 0px 5px 3px 1px rgba(215, 215, 215, 0.5);
+        display: block;
+        border-radius: 14px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+    &:hover {
+        box-shadow: inset 0px 0px 2px 3px $color-two;
+        bottom: -2.5px;
+        &:before {
+        box-shadow: inset 0px 5px 2px 0px rgba(215, 215, 215, 0.5);
+        // box-shadow: inset 0px 0px 0px 0px #ccc;
+            // box-shadow: inset 0 0px 2px 1px $color-two;
+        }
+    }
+    img{
+        max-width: 137px;
+    }
 }
 
 /* Online Players List */
@@ -475,10 +529,10 @@ footer{
         height: 306px;
     }
     .chat_box .message_list {
-        height: 70px;
+        height: 77px;
     }
 }
-@media only screen and (max-height: 768px) and (min-width: 768px) {
+@media only screen and (max-height: 767px) and (min-width: 768px) {
     .chat_box .message_list {
         height: 354px;
     }

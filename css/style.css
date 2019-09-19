@@ -36,6 +36,12 @@ body ::-webkit-scrollbar-thumb:window-inactive {
   background-color: #8c7e14;
 }
 
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #6e5f2c;
+}
+
 .row.custom_spacing {
   margin-right: -3px;
   margin-left: -3px;
@@ -57,6 +63,11 @@ body ::-webkit-scrollbar-thumb:window-inactive {
 .btn {
   font-weight: bold;
   padding: 0.5rem 1rem;
+}
+.btn:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-color: #6e5f2c;
 }
 .btn.btn_raised {
   position: relative;
@@ -119,10 +130,10 @@ body ::-webkit-scrollbar-thumb:window-inactive {
 
 header .mobile_btn {
   border-radius: 5px;
-  -webkit-box-shadow: inset 0px -1px 5px 2px #787878;
-          box-shadow: inset 0px -1px 5px 2px #787878;
-  width: 56px;
-  height: 56px;
+  -webkit-box-shadow: inset 0px -1px 1px 2px rgba(110, 95, 44, 0.5);
+          box-shadow: inset 0px -1px 1px 2px rgba(110, 95, 44, 0.5);
+  width: 45px;
+  height: 45px;
   display: inline-block;
   background: #9ec115;
   background-repeat: no-repeat;
@@ -139,6 +150,10 @@ header .mobile_btn.login_btn {
 }
 header .mobile_btn:hover {
   background-color: #93b313;
+}
+header .header_link {
+  min-width: 140px;
+  display: block;
 }
 
 .btn_mnav_close {
@@ -227,14 +242,61 @@ header .mobile_btn:hover {
 .chat_box form button.btn_send > img {
   width: 12px;
 }
+.chat_box form button.btn_send:focus {
+  border-color: #6e5f2c;
+}
 
 /* Profile Details */
 .profile_img {
   width: 137px;
   height: 87px;
   margin: auto;
-  background: url(/colonist/images/user-img.png) no-repeat;
   background-size: contain;
+  background-color: #bfb21e;
+  -webkit-box-shadow: inset 0px -2.5px 2px 3px #8c7e14;
+          box-shadow: inset 0px -2.5px 2px 3px #8c7e14;
+  border-radius: 14px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  bottom: 0;
+}
+.profile_img:before {
+  content: "";
+  position: absolute;
+  background: transparent;
+  -webkit-box-shadow: inset 0px 5px 3px 1px rgba(215, 215, 215, 0.5);
+          box-shadow: inset 0px 5px 3px 1px rgba(215, 215, 215, 0.5);
+  display: block;
+  border-radius: 14px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.profile_img:hover {
+  -webkit-box-shadow: inset 0px 0px 2px 3px #8c7e14;
+          box-shadow: inset 0px 0px 2px 3px #8c7e14;
+  bottom: -2.5px;
+}
+.profile_img:hover:before {
+  -webkit-box-shadow: inset 0px 5px 2px 0px rgba(215, 215, 215, 0.5);
+          box-shadow: inset 0px 5px 2px 0px rgba(215, 215, 215, 0.5);
+}
+.profile_img img {
+  max-width: 137px;
 }
 
 /* Online Players List */
@@ -412,10 +474,10 @@ footer a:hover {
   }
 
   .chat_box .message_list {
-    height: 70px;
+    height: 77px;
   }
 }
-@media only screen and (max-height: 768px) and (min-width: 768px) {
+@media only screen and (max-height: 767px) and (min-width: 768px) {
   .chat_box .message_list {
     height: 354px;
   }
