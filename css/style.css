@@ -349,6 +349,12 @@ header .header_link {
 .rooms_games_tabs_block .tab-content table tbody tr:hover {
   background-color: rgba(0, 0, 0, 0.075);
 }
+.rooms_games_tabs_block .tab-content table tbody tr td:nth-child(4) {
+  max-width: 75px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .rooms_games_tabs_block:nth-child(2) .tab-content .tab-pane {
   height: 280px;
 }

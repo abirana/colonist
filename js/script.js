@@ -5,7 +5,7 @@ $( "#mm_trigger-open" ).on( "click", mobileMenu_trigger);
 $( "#mm_trigger-close" ).on( "click", mobileMenu_trigger);
 
 $(window).on("load resize" ,function( event ){
-    var windoHeight = $(window).height() - 400;
+    var windoHeight = $(window).height() - 345;
     if($(window).width() < 576){
         $(".online_players_list").height(windoHeight*.5);
         $(".chat_box .message_list").height(windoHeight*.5);

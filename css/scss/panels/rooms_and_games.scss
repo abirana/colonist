@@ -62,6 +62,12 @@
                     &:hover {
                         background-color: rgba(0,0,0,.075);
                     }
+                    td:nth-child(4){
+                        max-width: 75px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
                 }
             }
         }
