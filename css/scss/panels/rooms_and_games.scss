@@ -21,9 +21,17 @@
         border-bottom-right-radius: $main-border-radius;
         padding-left: 6px;
         padding-right: 6px;
+        overflow: hidden;
+        .tab-pane:not(.active){
+            display: block;
+            height: 0;
+        }
         .tab-pane{
-            height: 390px;
-            overflow-y: auto;
+            // height: 390px;
+            // overflow-y: auto;
+        }
+        .dataTables_scrollBody{
+            height: 354px !important;
         }
         table{
             th{
@@ -62,12 +70,6 @@
                     &:hover {
                         background-color: rgba(0,0,0,.075);
                     }
-                    td:nth-child(4){
-                        max-width: 75px;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                    }
                 }
             }
         }
@@ -75,7 +77,7 @@
     &:nth-child(2){
         .tab-content{
             .tab-pane{
-                height: 280px;
+                // height: 280px;
             }
         }
     }
@@ -83,6 +85,7 @@
 }
 
 .player_count{
+    white-space: nowrap;
     &_one,
     &_two,
     &_three,
@@ -102,5 +105,15 @@
     &_four>img:nth-child(3),
     &_four>img:nth-child(4){
         opacity: 1;
+    }
+    @media (max-width: 767px) {
+        display: flex;
+        flex-flow: wrap;
+        width: 40px;
+        margin: auto;
+        >*{
+            width: 50%;
+            padding: 3px 4px;
+        }
     }
 }

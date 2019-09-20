@@ -7,7 +7,8 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-         
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/sc-2.0.0/datatables.min.css"/>
+ 
         <link href="https://fonts.googleapis.com/css?family=Niramit:200,300,400,500,600,700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="css/style.css?=22">
@@ -140,400 +141,396 @@
                                 </nav>
                                 <div class="tab-content pb-2" id="rooms_games_block-tabContent">
                                     <div class="tab-pane fade show active" id="nav-rooms" role="tabpanel" aria-labelledby="nav-rooms-tab">
-
-                                        <div class="table-responsive">
-                                            <table class="table table-borderless">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="karma" scope="col">Karma</th>
-                                                        <th class="players" scope="col">Players</th>
-                                                        <th class="mode" scope="col">Mode</th>
-                                                        <th class="title" scope="col">Title</th>
-                                                        <th class="elo" scope="col">Elo</th>
-                                                        <th class="join-view" scope="col">Join/View</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><img src="images/karma-white.png" alt=""></td>
-                                                        <td>
-                                                            <div class="player_count_two">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <img src="images/mode-icon-1.png" alt="">
-                                                        </td>
-                                                        <td>nesir's room</td>
-                                                        <td>
-                                                            <img src="images/elo-icon-1.png" alt="">
-                                                        </td>
-                                                        <td>
-                                                            <button class="btn btn_create w-100">Create</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="images/karma-red.png" alt=""></td>
-                                                        <td>
-                                                            <div class="player_count_three">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                            </div>                                                        </td>
-                                                        <td>
-                                                            <img src="images/mode-icon-2.png" alt="">
-                                                        </td>
-                                                        <td>someone's room someone's room someone's room </td>
-                                                        <td>
-                                                            <img src="images/elo-icon-2.png" alt="">
-                                                        </td>
-                                                        <td>
-                                                            <button class="btn btn_join w-100">Join</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="images/karma-orange.png" alt=""></td>
-                                                        <td>
-                                                            <div class="player_count_one">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                            </div>                                                        </td>
-                                                        <td>
-                                                            <img src="images/mode-icon-3.png" alt="">
-                                                        </td>
-                                                        <td></td>
-                                                        <td>
-                                                            <img src="images/elo-icon-3.png" alt="">
-                                                        </td>
-                                                        <td>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="images/karma-green.png" alt=""></td>
-                                                        <td>
-                                                            <div class="player_count_four">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                            </div>                                                        </td>
-                                                        <td>
-                                                            <img src="images/mode-icon-2.png" alt="">
-                                                        </td>
-                                                        <td></td>
-                                                        <td>
-                                                        </td>
-                                                        <td>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        <table class="table table-borderless" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="karma" scope="col">Karma</th>
+                                                    <th class="players" scope="col">Players</th>
+                                                    <th class="mode" scope="col">Mode</th>
+                                                    <th class="title" scope="col">Title</th>
+                                                    <th class="elo" scope="col">Elo</th>
+                                                    <th class="join-view" scope="col">Join/View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="images/karma-white.png" alt=""></td>
+                                                    <td>
+                                                        <div class="player_count player_count_two">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <img src="images/mode-icon-1.png" alt="">
+                                                    </td>
+                                                    <td>nesir's room</td>
+                                                    <td>
+                                                        <img src="images/elo-icon-1.png" alt="">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn_create w-100">Create</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="images/karma-red.png" alt=""></td>
+                                                    <td>
+                                                        <div class="player_count player_count_three">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <img src="images/mode-icon-2.png" alt="">
+                                                    </td>
+                                                    <td>someone's room someone's room someone's room </td>
+                                                    <td>
+                                                        <img src="images/elo-icon-2.png" alt="">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn_join w-100">Join</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="images/karma-orange.png" alt=""></td>
+                                                    <td>
+                                                        <div class="player_count player_count_one">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                        </div>                                                        </td>
+                                                    <td>
+                                                        <img src="images/mode-icon-3.png" alt="">
+                                                    </td>
+                                                    <td></td>
+                                                    <td>
+                                                        <img src="images/elo-icon-3.png" alt="">
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="images/karma-green.png" alt=""></td>
+                                                    <td>
+                                                        <div class="player_count player_count_four">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                        </div>                                                        </td>
+                                                    <td>
+                                                        <img src="images/mode-icon-2.png" alt="">
+                                                    </td>
+                                                    <td></td>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <div class="tab-pane fade" id="nav-games" role="tabpanel" aria-labelledby="nav-games-tab">
-                                        <div class="table-responsive">
-                                            <table class="table table-borderless">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="karma" scope="col">Karma</th>
-                                                        <th class="players" scope="col">Players</th>
-                                                        <th class="mode" scope="col">Mode</th>
-                                                        <th class="title" scope="col">Title</th>
-                                                        <th class="elo" scope="col">Elo</th>
-                                                        <th class="join-view" scope="col">Join/View</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><img src="images/karma-white.png" alt=""></td>
-                                                        <td>
-                                                            <div class="player_count_three">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <img src="images/mode-icon-1.png" alt="">
-                                                        </td>
-                                                        <td>nesir's room</td>
-                                                        <td>
-                                                            <img src="images/elo-icon-1.png" alt="">
-                                                        </td>
-                                                        <td>
-                                                            <button class="btn btn_spectate w-100">Spectate</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="images/karma-red.png" alt=""></td>
-                                                        <td>
-                                                            <div class="player_count_three">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <img src="images/mode-icon-2.png" alt="">
-                                                        </td>
-                                                        <td></td>
-                                                        <td>
-                                                            <img src="images/elo-icon-2.png" alt="">
-                                                        </td>
-                                                        <td>
-                                                            <button class="btn btn_spectate w-100">Spectate</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="images/karma-orange.png" alt=""></td>
-                                                        <td>
-                                                            <div class="player_count_two">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <img src="images/mode-icon-3.png" alt="">
-                                                        </td>
-                                                        <td></td>
-                                                        <td>
-                                                            <img src="images/elo-icon-3.png" alt="">
-                                                        </td>
-                                                        <td>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="images/karma-green.png" alt=""></td>
-                                                        <td>
-                                                            <div class="player_count_four">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                                <img src="images/online-user-icon.png" alt="">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <img src="images/mode-icon-2.png" alt="">
-                                                        </td>
-                                                        <td></td>
-                                                        <td>
-                                                        </td>
-                                                        <td>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        <table class="table table-borderless" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="karma" scope="col">Karma</th>
+                                                    <th class="players" scope="col">Players</th>
+                                                    <th class="mode" scope="col">Mode</th>
+                                                    <th class="title" scope="col">Title</th>
+                                                    <th class="elo" scope="col">Elo</th>
+                                                    <th class="join-view" scope="col">Join/View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="images/karma-white.png" alt=""></td>
+                                                    <td>
+                                                        <div class="player_count player_count_three">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <img src="images/mode-icon-1.png" alt="">
+                                                    </td>
+                                                    <td>nesir's room</td>
+                                                    <td>
+                                                        <img src="images/elo-icon-1.png" alt="">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn_spectate w-100">Spectate</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="images/karma-red.png" alt=""></td>
+                                                    <td>
+                                                        <div class="player_count player_count_three">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <img src="images/mode-icon-2.png" alt="">
+                                                    </td>
+                                                    <td></td>
+                                                    <td>
+                                                        <img src="images/elo-icon-2.png" alt="">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn_spectate w-100">Spectate</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="images/karma-orange.png" alt=""></td>
+                                                    <td>
+                                                        <div class="player_count player_count_two">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <img src="images/mode-icon-3.png" alt="">
+                                                    </td>
+                                                    <td></td>
+                                                    <td>
+                                                        <img src="images/elo-icon-3.png" alt="">
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="images/karma-green.png" alt=""></td>
+                                                    <td>
+                                                        <div class="player_count player_count_four">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                            <img src="images/online-user-icon.png" alt="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <img src="images/mode-icon-2.png" alt="">
+                                                    </td>
+                                                    <td></td>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -686,9 +683,10 @@
             </div>
         </footer>
         
-        <!-- Remove below JS file if you already have jQuery on the site -->
+        <!-- Remove below jQuery file if you already have jQuery on the site -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/sc-2.0.0/datatables.min.js"></script>         
 
-        <script src="js/script.js"></script>
+        <script src="js/script.js?=1"></script>
     </body>
 </html>
