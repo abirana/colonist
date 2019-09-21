@@ -68,7 +68,7 @@
         height: 114px;
     }
 }
-@media only screen and (max-height: 767px) and (min-width: 768px) {
+@media only screen and (max-height: 670px) and (min-width: 768px) {
     .chat_box .message_list {
         height: 354px;
     }
@@ -81,14 +81,6 @@
     .online_players_list {
         height: 131px;
     }
-    .ab_block{
-        &.ab_block-one,
-        &.ab_block-two{
-            img{
-                height: 450px;
-            }
-        }
-    }    
 }
 
 @media (max-height: 375px) and (max-width: 991px){
@@ -110,6 +102,21 @@
                 order: 4 !important;
             }
         }
+    }
+}
+@media (max-height: 768px){
+    .ab_block{
+        &.ab_block-one,
+        &.ab_block-two{
+            img{
+                height: 450px;
+            }
+        }
+    }    
+}
+@media (min-height: 875px){
+    .dataTables_scrollBody{
+        height: 354px !important;
     }
 }
 @media (max-height: 360px) and (max-width: 767px){

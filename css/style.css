@@ -334,7 +334,7 @@ header .header_link {
   height: 0;
 }
 .rooms_games_tabs_block .tab-content .dataTables_scrollBody {
-  height: 354px !important;
+  height: 354px;
 }
 .rooms_games_tabs_block .tab-content table th {
   padding: .3rem .2rem;
@@ -472,7 +472,7 @@ footer a:hover {
     height: 114px;
   }
 }
-@media only screen and (max-height: 767px) and (min-width: 768px) {
+@media only screen and (max-height: 670px) and (min-width: 768px) {
   .chat_box .message_list {
     height: 354px;
   }
@@ -483,10 +483,6 @@ footer a:hover {
 
   .online_players_list {
     height: 131px;
-  }
-
-  .ab_block.ab_block-one img, .ab_block.ab_block-two img {
-    height: 450px;
   }
 }
 @media (max-height: 375px) and (max-width: 991px) {
@@ -505,6 +501,16 @@ footer a:hover {
     -webkit-box-ordinal-group: 5 !important;
         -ms-flex-order: 4 !important;
             order: 4 !important;
+  }
+}
+@media (max-height: 768px) {
+  .ab_block.ab_block-one img, .ab_block.ab_block-two img {
+    height: 450px;
+  }
+}
+@media (min-height: 875px) {
+  .dataTables_scrollBody {
+    height: 354px !important;
   }
 }
 @media (max-height: 360px) and (max-width: 767px) {

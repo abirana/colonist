@@ -35,6 +35,21 @@ $(window).on("load resize", function( event ) {
     }
 });
 
+$(window).on("load resize", function( event ) {
+    var windoHeight = $(window).height();
+    if($(window).height() > 670 && $(window).height() < 876){
+        $(".online_players_list").height(windoHeight-550);
+        $(".chat_box .message_list").height(windoHeight-328);
+        // $(".rooms_games_tabs_block .tab-content .dataTables_scrollBody").height(windoHeight-298);
+        $(".rooms_games_tabs_block .tab-content .dataTables_scrollBody").css( "height", windoHeight-428 );
+    }
+    else{
+        $(".online_players_list").removeAttr("style");
+        $(".chat_box .message_list").removeAttr("style");
+        $(".rooms_games_tabs_block .tab-content .tab-pane").removeAttr("style");
+    }
+});
+
 // Rooms Games tabs
 $("#rooms_games-tabs a").on("click", function (e) {
     e.preventDefault()
