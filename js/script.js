@@ -14,6 +14,9 @@ function responsiveFixes() {
     if($(window).width() > 575 && $(window).width() < 768){
         $( ".chat_box" ).parent().prepend( $( "header" ) );
     }
+    else if($(window).width() < 992 && $(window).height() < 375){
+        $( ".chat_box" ).parent().prepend( $( "header" ) );
+    }
     else{
         $( "body" ).prepend( $( "header" ) );
     }

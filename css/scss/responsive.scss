@@ -91,7 +91,7 @@
     }    
 }
 
-@media (max-height: 360px) and (max-width: 767px){
+@media (max-height: 375px) and (max-width: 991px){
     .rooms_games_tabs_block .tab-content .tab-pane {
         // height: 286px;
     }
@@ -99,7 +99,27 @@
         height: 250px !important;
     }
     .chat_box .message_list {
+        height: 115px;
+    }
+    .lobby_block{
+        >.row{
+            >:nth-child(1){
+                display: none !important;
+            }
+            >:nth-child(2){
+                order: 4 !important;
+            }
+        }
+    }
+}
+@media (max-height: 360px) and (max-width: 767px){
+    .chat_box .message_list {
         height: 95px;
+    }
+}
+@media (max-height: 375px){
+    .lobby_block>.row>:nth-child(2)>:not(.rooms_games_tabs_block){
+        display: none !important;
     }
 }
 

@@ -489,13 +489,32 @@ footer a:hover {
     height: 450px;
   }
 }
-@media (max-height: 360px) and (max-width: 767px) {
+@media (max-height: 375px) and (max-width: 991px) {
   .rooms_games_tabs_block .tab-content .tab-pane .dataTables_scrollBody {
     height: 250px !important;
   }
 
   .chat_box .message_list {
+    height: 115px;
+  }
+
+  .lobby_block > .row > :nth-child(1) {
+    display: none !important;
+  }
+  .lobby_block > .row > :nth-child(2) {
+    -webkit-box-ordinal-group: 5 !important;
+        -ms-flex-order: 4 !important;
+            order: 4 !important;
+  }
+}
+@media (max-height: 360px) and (max-width: 767px) {
+  .chat_box .message_list {
     height: 95px;
+  }
+}
+@media (max-height: 375px) {
+  .lobby_block > .row > :nth-child(2) > :not(.rooms_games_tabs_block) {
+    display: none !important;
   }
 }
 @media only screen and (orientation: landscape), only screen and (min-width: 576px) {
