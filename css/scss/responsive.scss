@@ -1,16 +1,3 @@
-$breakPoint_width_sm : 576px; // 
-$breakPoint_width_md : 768px; // 
-$breakPoint_width_lg : 992px; // 
-$breakPoint_width_xl : 1200px; // 
-$breakPoint_width_xxl : 1400px; // 
-
-$breakPoint_height_xs : 360px; // 
-$breakPoint_height_sm : 375px; // 
-$breakPoint_height_ms : 670px; // 
-$breakPoint_height_md : 768px; // 
-$breakPoint_height_lg : 876px; // 
-$breakPoint_height_xl : 1030px; // 
-
 @media (min-width: $breakPoint_width_xxl){
     .container {
         max-width: 1340px;
