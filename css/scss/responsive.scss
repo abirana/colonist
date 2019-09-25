@@ -1,32 +1,42 @@
+$breakPoint_width_sm : 576px; // 
+$breakPoint_width_md : 768px; // 
+$breakPoint_width_lg : 992px; // 
+$breakPoint_width_xl : 1200px; // 
+$breakPoint_width_xxl : 1400px; // 
 
-@media (min-width: 1400px){
+$breakPoint_height_xs : 360px; // 
+$breakPoint_height_sm : 375px; // 
+$breakPoint_height_ms : 670px; // 
+$breakPoint_height_md : 768px; // 
+$breakPoint_height_lg : 876px; // 
+$breakPoint_height_xl : 1030px; // 
+
+@media (min-width: $breakPoint_width_xxl){
     .container {
         max-width: 1340px;
     }
 }
-
-@media (max-width: 1399px){
+@media (max-width: $breakPoint_width_xxl - 1px){
     .main_container_block{
         max-width: 100%;
     }
 }
-
-@media (max-height: 875px){
+@media (max-height: $breakPoint_height_lg - 1px){
     .ab_block.ab_block-three{
         display: none;
     }
 }
-@media (min-height: 1030px){
+@media (min-height: $breakPoint_height_xl){
     .ab_block.ab_block-three{
         display: none;
     }
 }
-@media (max-height: 1029px){
+@media (max-height: $breakPoint_height_xl - 1px){
     .ab_block.ab_block-four{
         display: none;
     }
 }
-@media (max-width: 767px){
+@media (max-width: $breakPoint_width_md - 1px){
     .rooms_games_tabs_block .tab-content .tab-pane {
         // height: 243px;
     }
@@ -37,7 +47,7 @@
         height: 197px;
     }
 }
-@media (min-width: 576px) and (max-width: 767px){
+@media (min-width: $breakPoint_width_sm) and (max-width: $breakPoint_width_md - 1px){
     header.container-fluid{
         padding-right: 0;
         padding-left: 0;
@@ -68,7 +78,7 @@
         height: 114px;
     }
 }
-@media only screen and (max-height: 670px) and (min-width: 768px) {
+@media only screen and (max-height: $breakPoint_height_ms) and (min-width: $breakPoint_width_md) {
     .chat_box .message_list {
         height: 354px;
     }
@@ -83,7 +93,7 @@
     }
 }
 
-@media (max-height: 375px) and (max-width: 991px){
+@media (max-height: $breakPoint_height_sm) and (max-width: $breakPoint_width_lg - 1px){
     .rooms_games_tabs_block .tab-content .tab-pane {
         // height: 286px;
     }
@@ -104,7 +114,7 @@
         }
     }
 }
-@media (max-height: 768px){
+@media (max-height: $breakPoint_height_md){
     .ab_block{
         &.ab_block-one,
         &.ab_block-two{
@@ -114,36 +124,35 @@
         }
     }    
 }
-@media (min-height: 875px){
+@media (min-height: $breakPoint_height_lg){
     .dataTables_scrollBody{
-        height: 354px !important;
+        height: 354px;
     }
 }
-@media (max-height: 360px) and (max-width: 767px){
+@media (max-height: $breakPoint_height_xs) and (max-width: $breakPoint_width_md - 1px){
     .chat_box .message_list {
         height: 95px;
     }
 }
-@media (max-height: 375px){
+@media (max-height: $breakPoint_height_sm){
     .lobby_block>.row>:nth-child(2)>:not(.rooms_games_tabs_block){
         display: none !important;
     }
 }
 
-@media only screen and (orientation: landscape), only screen and (min-width: 576px) {
+@media only screen and (orientation: landscape), only screen and (min-width: $breakPoint_width_sm) {
     .rotation_message {
         display: none;
     }
 }
 
 /* Mobbile sidebar/nav */
-@media (min-width: 992px){
+@media (min-width: $breakPoint_width_lg){
     header .mobile_btn{
         display: none;
     }
 }
-
-@media (max-width: 991px){
+@media (max-width: $breakPoint_width_lg - 1px){
     .res_block{
         &.active{
             transform: translateX(0%);
@@ -198,7 +207,7 @@
         }
     }
 }
-@media (max-width: 767px){
+@media (max-width: $breakPoint_width_md - 1px){
     footer.res_block{
         position: fixed;
         z-index: 9999;

@@ -508,9 +508,9 @@ footer a:hover {
     height: 450px;
   }
 }
-@media (min-height: 875px) {
+@media (min-height: 876px) {
   .dataTables_scrollBody {
-    height: 354px !important;
+    height: 354px;
   }
 }
 @media (max-height: 360px) and (max-width: 767px) {
