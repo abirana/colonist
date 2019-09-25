@@ -8,6 +8,11 @@ var breakPoint_height_md = 670;
 var breakPoint_height_lg = 876;
 var breakPoint_height_xl = 1030;
 
+var negative_space_sm = 345;
+var negative_space_onlinePlayers = 550;
+var negative_space_chatBox = 328;
+var negative_space_roomsGamesBlock = 428;
+
 function mobileMenu_trigger() {
     $(".res_block").toggleClass("active");
 }
@@ -34,7 +39,7 @@ function responsiveFixes() {
 $(window).on("load resize", responsiveFixes);
 
 $(window).on("load resize", function( event ) {
-    var windoHeight = $(window).height() - 345;
+    var windoHeight = $(window).height() - negative_space_sm;
     if($(window).width() < breakPoint_width_sm && $(window).height() > $(window).width()){
         $(".online_players_list").height(windoHeight*.5);
         $(".chat_box .message_list").height(windoHeight*.5);
@@ -48,20 +53,19 @@ $(window).on("load resize", function( event ) {
 $(window).on("load resize", function( event ) {
     var windoHeight = $(window).height();
     if($(window).height() > breakPoint_height_md && $(window).height() < breakPoint_height_lg){
-        $(".online_players_list").height(windoHeight-550);
-        $(".chat_box .message_list").height(windoHeight-328);
-        // $(".rooms_games_tabs_block .tab-content .dataTables_scrollBody").height(windoHeight-298);
-        $(".rooms_games_tabs_block .tab-content .dataTables_scrollBody").css( "height", windoHeight-428);
+        $(".online_players_list").height(windoHeight-negative_space_onlinePlayers);
+        $(".chat_box .message_list").height(windoHeight-negative_space_chatBox);
+        $(".rooms_games_tabs_block .tab-content .dataTables_scrollBody").css( "height", windoHeight-negative_space_roomsGamesBlock);
     }
     else if($(window).height() > breakPoint_height_lg && $(window).height() < breakPoint_height_xl){
-        $(".online_players_list").height(windoHeight-(550+90));
-        $(".chat_box .message_list").height(windoHeight-(328+90));
-        $(".rooms_games_tabs_block .tab-content .dataTables_scrollBody").css( "height", windoHeight-(428+90));
+        $(".online_players_list").height(windoHeight-(negative_space_onlinePlayers+90));
+        $(".chat_box .message_list").height(windoHeight-(negative_space_chatBox+90));
+        $(".rooms_games_tabs_block .tab-content .dataTables_scrollBody").css( "height", windoHeight-(negative_space_roomsGamesBlock+90));
     }
     else if($(window).height() > breakPoint_height_xl){
-        $(".online_players_list").height(windoHeight-(550+264));
-        $(".chat_box .message_list").height(windoHeight-(328+264));
-        $(".rooms_games_tabs_block .tab-content .dataTables_scrollBody").css( "height", windoHeight-(428+264));
+        $(".online_players_list").height(windoHeight-(negative_space_onlinePlayers+264));
+        $(".chat_box .message_list").height(windoHeight-(negative_space_chatBox+264));
+        $(".rooms_games_tabs_block .tab-content .dataTables_scrollBody").css( "height", windoHeight-(negative_space_roomsGamesBlock+264));
     }
     else{
         $(".online_players_list").removeAttr("style");
